@@ -1,0 +1,42 @@
+body{
+
+
+background-image: url(https://cdn.discordapp.com/attachments/600467939686350866/877665045406973992/unknown.png);
+            background-size: 100% 100% ;
+            background-attachment: fixed;
+        }
+
+       .menu{
+	list-style: none;
+	padding: 0;
+	background: #092327;
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.menu li a{
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	display: block;
+}
+
+.menu li{
+	display: inline-block;
+	text-align: center;
+}
+
+.menu li a:hover{
+	background: #ef8354;
+}
+
+
+
+
+
+
+
+
+
+
