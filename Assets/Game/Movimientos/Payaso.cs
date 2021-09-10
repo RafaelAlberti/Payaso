@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Movimientos/Payaso.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Game/Movimientos/Payaso.inputactions'
 
 using System;
 using System.Collections;
