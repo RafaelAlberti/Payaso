@@ -7,16 +7,6 @@ using UnityEngine;
 public class MenuPrincipal : MonoBehaviour
 {
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
 
     public void EmpezarJuego()
     {

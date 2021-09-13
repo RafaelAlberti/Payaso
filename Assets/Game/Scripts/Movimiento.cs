@@ -3,77 +3,56 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Movimiento : MonoBehaviour
-{
-    public float saltar = 3;
-    public float velocidad = 2;
-    Rigidbody2D body;
+{ 
+    [SerializeField] private Transform Jugador;
+    public float saltar = 3.0f;
+    public float velocidad = 0.04f;
     private Animator Animator;
-    
+    float HorizontalInput;
+    float VerticalInput;
+
+
+
 
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
-       
     }
 
     private void Update()
     {
         Morir();
         Animacion();
-
-
-
+        Moverse();
+       Saltar();
     }
 
     void FixedUpdate()
     {
-        Moverse();
-
-        Saltar();
+        
     } 
     
 
     public void Moverse()
     {
-
-        if (Input.GetKey("d") || Input.GetKey("right"))
-        {
-            body.velocity = new Vector2(velocidad, body.velocity.y);
-
-            if (body.velocity.x > 0)
-            {
-                transform.localScale = new Vector3(1, 1, 1);  
-            }
-        }
-        else if (Input.GetKey("a") || Input.GetKey("left"))
-        {
-            
-            body.velocity = new Vector2(-velocidad, body.velocity.y);
-
-            if (body.velocity.x < 0)
-            {
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-
-        }
-
-        else
-        {
-            body.velocity = new Vector2(0, body.velocity.y);
-        }
+        HorizontalInput = Input.GetAxis("Horizontal");
+      
+       Jugador.Translate(Vector3.right * HorizontalInput * velocidad );
+     
+        Debug.Log(HorizontalInput);
 
     }
-    
+
+
+
     public void Saltar()
     {
+       
+        VerticalInput = Input.GetAxis("Vertical");
+       
+        Jugador.Translate(Vector3.up * VerticalInput * saltar);
 
-        if (Input.GetKey("space") && ComprobarSuelo.Suelo)
-        {
-            body.velocity = new Vector2(body.velocity.x, saltar);
-        }
-
-
+        Debug.Log(VerticalInput);
     }
 
     public void Morir()
@@ -88,7 +67,7 @@ public class Movimiento : MonoBehaviour
 
     public void Animacion()
     {
-        Animator.SetFloat("Velocidad", Mathf.Abs(body.velocity.x));
-        Animator.SetBool("Suelo", ComprobarSuelo.Suelo);
+        //Animator.SetFloat("Velocidad", Mathf.Abs(body.velocity.x));
+        //Animator.SetBool("Suelo", ComprobarSuelo.Suelo);
     }
 }
