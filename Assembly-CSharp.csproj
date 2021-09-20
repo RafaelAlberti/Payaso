@@ -62,6 +62,7 @@
     <Compile Include="Assets\Game\Scripts\Muerte.cs" />
     <Compile Include="Assets\Menu\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Game\Managers\InputManager.cs" />
+    <Compile Include="Assets\Menu\Scripts\MenuManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Menu\TextMesh Pro\Shaders\TMPro.cginc" />
