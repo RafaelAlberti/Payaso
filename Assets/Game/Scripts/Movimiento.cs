@@ -37,17 +37,27 @@ public class Movimiento : MonoBehaviour
     public void OnMoverse(InputValue valor)
     {
         this.Direccion = valor.Get<Vector2>();
+        
     }
 
     public void Moverse()
     {
         Jugador.Translate(Vector3.right * this.Direccion.x * Time.deltaTime * this.velocidad);
         
+        if (Direccion.x >= 0)
+        {
+            Jugador.localScale = new Vector3(1, 1, 1);
+
+        }
+        else
+        {
+            Jugador.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
 
 
-  public void Saltar()
+   public void Saltar()
     { 
         Jugador.Translate(Vector3.up * this.Direccion.y * Time.deltaTime * this.saltar);
     }
