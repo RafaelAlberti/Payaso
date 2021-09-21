@@ -10,12 +10,12 @@ public class MenuPrincipal : MonoBehaviour
 
     public void EmpezarJuego()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Game", LoadSceneMode.Single);
     }
 
     public void Opciones()
     {
-        SceneManager.LoadScene("Opciones");
+        SceneManager.LoadScene("Opciones", LoadSceneMode.Additive);
     }
 
 
