@@ -74,8 +74,8 @@ GameObject:
   - component: {fileID: 1785105960645062774}
   - component: {fileID: 1785105960645062773}
   - component: {fileID: 1785105960645062768}
-  - component: {fileID: 1785105960645062775}
   - component: {fileID: 1785105960645062769}
+  - component: {fileID: 1270620615485406024}
   m_Layer: 0
   m_Name: Payaso
   m_TagString: Player
@@ -231,21 +231,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.018144282, y: -0.75782204}
   m_Size: {x: 1.3959105, y: 0.19339183}
   m_Direction: 1
---- !u!114 &1785105960645062775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785105960645062729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b90d06afc536b04e9533c0e9fc51aba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Jugador: {fileID: 1785105960645062772}
-  saltar: 4
-  velocidad: 2
 --- !u!114 &1785105960645062769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,3 +244,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Perdiste: {fileID: 0}
+--- !u!114 &1270620615485406024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785105960645062729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b90d06afc536b04e9533c0e9fc51aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saltar: 3
+  velocidad: 5

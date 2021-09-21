@@ -817,7 +817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.4624615, y: 0.14611822, z: -10}
+  m_LocalPosition: {x: 7.4661503, y: 0.14610535, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 937193594}
@@ -12790,7 +12790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692785346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8688905, y: 0.16000038, z: -10}
+  m_LocalPosition: {x: 1.8674886, y: 0.16000038, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 72083625}
@@ -13984,7 +13984,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1134805292
 MonoBehaviour:
@@ -14106,13 +14106,48 @@ RectTransform:
   m_Children:
   - {fileID: 1659357800}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1286887759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1785105960645062729, guid: 7d55f434357473843a5d9ed2c5bf084c, type: 3}
+  m_PrefabInstance: {fileID: 1785105959328093204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1286887760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286887759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 039c0c99ae922b4498c995b1b63d80cc, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Acciones
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!4 &1317102688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1785105960645062772, guid: 7d55f434357473843a5d9ed2c5bf084c, type: 3}
@@ -19693,6 +19728,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1270620615485406024, guid: 7d55f434357473843a5d9ed2c5bf084c, type: 3}
+      propertyPath: saltar
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1785105960645062729, guid: 7d55f434357473843a5d9ed2c5bf084c, type: 3}
       propertyPath: m_Name
       value: Payaso
@@ -19747,9 +19786,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1785105960645062775, guid: 7d55f434357473843a5d9ed2c5bf084c, type: 3}
       propertyPath: velocidad
-      value: 0.08
+      value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1785105960645062775, guid: 7d55f434357473843a5d9ed2c5bf084c, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 1286887760}
+    m_RemovedComponents:
+    - {fileID: 143789388858781388, guid: 7d55f434357473843a5d9ed2c5bf084c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d55f434357473843a5d9ed2c5bf084c, type: 3}
 --- !u!1001 &8572400486414814229
 PrefabInstance:

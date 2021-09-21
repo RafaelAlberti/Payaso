@@ -26,7 +26,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Atras()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("MenuPrincipal" , LoadSceneMode.Single);
     }
 
 }
