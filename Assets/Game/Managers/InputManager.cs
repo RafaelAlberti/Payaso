@@ -5,23 +5,25 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    public Movimiento Movimiento;
-
-
-   
+    Movimiento movimiento;
+    PlayerInput playerInput;
     void Start()
     {
-
+        playerInput = GetComponent<PlayerInput>();
+        movimiento = GetComponent<Movimiento>();
     }
 
-
-    void Update()
+    void OnAtacar(InputValue Valor)
     {
 
     }
 
+    void OnMovimiento(InputValue Valor)
+    {
+        /**Vector2 Direccion = Valor.Get<Vector2>();
+        movimiento.EntradaInput(Direccion.x);**/
 
-
+    }
  
 
 }

@@ -10,8 +10,9 @@ public class Movimiento : MonoBehaviour
     public float saltar = 5.0f;
     public float velocidad = 5.0f;
     private Animator Animator;
+    //float DireccionInput;
     private Vector2 Direccion;
-    
+
 
     void Start()
     {
@@ -22,15 +23,14 @@ public class Movimiento : MonoBehaviour
 
     private void Update()
     {
-        Moverse();
         Morir();
         Animacion();
-        Saltar();
-
     }
 
     void FixedUpdate()
     {
+        Moverse();
+        Saltar();
         
     }
 
@@ -42,7 +42,7 @@ public class Movimiento : MonoBehaviour
 
     public void Moverse()
     {
-        Jugador.Translate(Vector3.right * this.Direccion.x * Time.deltaTime * this.velocidad);
+        Jugador.Translate(Vector3.right * Direccion * Time.deltaTime * this.velocidad);
         
         if (Direccion.x >= 0)
         {
@@ -55,11 +55,14 @@ public class Movimiento : MonoBehaviour
         }
     }
 
-
+   /** public void EntradaInput(float Direccion)
+    {
+        this.DireccionInput = Direccion;
+    }**/
 
    public void Saltar()
     { 
-        Jugador.Translate(Vector3.up * this.Direccion.y * Time.deltaTime * this.saltar);
+       Jugador.Translate(Vector3.up * this.Direccion.y * Time.deltaTime * this.saltar);
     }
 
     public void Morir()
@@ -71,6 +74,12 @@ public class Movimiento : MonoBehaviour
 
 
     }
+
+    public void Atacar()
+    {
+
+    }
+
 
     public void Animacion()
     {

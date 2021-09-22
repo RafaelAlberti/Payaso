@@ -256,5 +256,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b90d06afc536b04e9533c0e9fc51aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saltar: 3
+  saltar: 8
   velocidad: 5
