@@ -43,15 +43,18 @@ public class Movimiento : MonoBehaviour
     public void Moverse()
     {
         Jugador.Translate(Vector3.right * Direccion * Time.deltaTime * this.velocidad);
-        
+
+       Debug.Log(Jugador.position.x);
+
         if (Direccion.x >= 0)
         {
             Jugador.localScale = new Vector3(1, 1, 1);
-
+            //transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else
         {
             Jugador.localScale = new Vector3(-1, 1, 1);
+            //transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
 
@@ -75,15 +78,10 @@ public class Movimiento : MonoBehaviour
 
     }
 
-    public void Atacar()
-    {
-
-    }
-
-
     public void Animacion()
     {
         Animator.SetFloat("Velocidad", Mathf.Abs(Direccion.x));
         Animator.SetBool("Suelo", ComprobarSuelo.Suelo);
+        Animator.SetBool("Disparar", Disparar.Disparo);
     }
 }

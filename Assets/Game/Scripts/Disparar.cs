@@ -9,7 +9,7 @@ public class Disparar : MonoBehaviour
     PlayerInput Input;
     [SerializeField] Transform PuntodeDisparo;
     [SerializeField] private GameObject bala;
-    
+    public static bool Disparo = false;
 
     void Start()
     {
@@ -24,7 +24,8 @@ public class Disparar : MonoBehaviour
 
     public void OnAtacar()
     {
-        Instantiate(bala, PuntodeDisparo.position, Quaternion.identity);
+      Instantiate(bala, PuntodeDisparo.position,PuntodeDisparo.rotation);
+        Disparo = true;
     }
    
  
