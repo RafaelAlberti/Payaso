@@ -28,7 +28,7 @@ public class Bala : MonoBehaviour
 
     private void DestruccionBala()
     {
-        Destroy(this.gameObject, 2f);
+        Destroy(this.gameObject, 1f);
     }
 
 

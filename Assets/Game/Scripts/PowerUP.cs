@@ -9,12 +9,7 @@ public class PowerUP : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         { 
-
-            Debug.Log("Era un powerUP?");
             Destroy(gameObject, 0.2f);
-            
-
-
         }
 
     }

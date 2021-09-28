@@ -10,8 +10,7 @@ public class Movimiento : MonoBehaviour
     public float saltar = 5.0f;
     public float velocidad = 5.0f;
     private Animator Animator;
-    //float DireccionInput;
-    private Vector2 Direccion;
+    public Vector2 Direccion;
 
 
     void Start()
@@ -44,24 +43,15 @@ public class Movimiento : MonoBehaviour
     {
         Jugador.Translate(Vector3.right * Direccion * Time.deltaTime * this.velocidad);
 
-       Debug.Log(Jugador.position.x);
-
         if (Direccion.x >= 0)
         {
             Jugador.localScale = new Vector3(1, 1, 1);
-            //transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else
         {
             Jugador.localScale = new Vector3(-1, 1, 1);
-            //transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
-
-   /** public void EntradaInput(float Direccion)
-    {
-        this.DireccionInput = Direccion;
-    }**/
 
    public void Saltar()
     { 
@@ -84,4 +74,5 @@ public class Movimiento : MonoBehaviour
         Animator.SetBool("Suelo", ComprobarSuelo.Suelo);
         Animator.SetBool("Disparar", Disparar.Disparo);
     }
+   
 }

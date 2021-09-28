@@ -24,9 +24,12 @@ public class Disparar : MonoBehaviour
 
     public void OnAtacar()
     {
-      Instantiate(bala, PuntodeDisparo.position,PuntodeDisparo.rotation);
+        
+        Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
         Disparo = true;
-    }
+    }   
+            
+    
    
  
 }

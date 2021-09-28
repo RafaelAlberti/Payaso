@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Game/Movimientos/Payaso.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Game/Inputs/Payaso.inputactions'
 
 using System;
 using System.Collections;
@@ -32,7 +32,15 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""id"": ""3bfd9fe3-c093-4327-a9bc-656b701d493f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Pausa"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ec0ef51-16af-44a8-bd24-37aded5c2513"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -73,17 +81,6 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""name"": ""up"",
                     ""id"": ""0a0cfa3c-7725-4a57-ba73-f73e7fc384d3"",
                     ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Moverse"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""92a0221e-319e-4d19-8702-5f9ee534c870"",
-                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -136,17 +133,6 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""down"",
-                    ""id"": ""7c67c76e-a87d-4368-ad00-a626edb9f32d"",
-                    ""path"": ""<Joystick>/stick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Moverse"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""left"",
                     ""id"": ""b8324725-3644-4bcc-b87b-7b98f6fb1b9c"",
                     ""path"": ""<Joystick>/stick/left"",
@@ -191,17 +177,6 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""down"",
-                    ""id"": ""192d57a0-cd84-46ce-82e5-b9362698f96b"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Moverse"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""left"",
                     ""id"": ""666ab15b-ec92-4637-b371-205649d6eb60"",
                     ""path"": ""<Keyboard>/leftArrow"",
@@ -222,6 +197,39 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""action"": ""Moverse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0820c3c6-6200-4782-a350-bac7a7915cf0"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44b861a2-c4d1-40dc-9c70-e100b401c3c6"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77bb612d-43b4-495d-9c66-fcc0991274ab"",
+                    ""path"": ""<DualShockGamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -799,6 +807,7 @@ public class @Payaso : IInputActionCollection, IDisposable
         m_Acciones = asset.FindActionMap("Acciones", throwIfNotFound: true);
         m_Acciones_Moverse = m_Acciones.FindAction("Moverse", throwIfNotFound: true);
         m_Acciones_Atacar = m_Acciones.FindAction("Atacar", throwIfNotFound: true);
+        m_Acciones_Pausa = m_Acciones.FindAction("Pausa", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -862,12 +871,14 @@ public class @Payaso : IInputActionCollection, IDisposable
     private IAccionesActions m_AccionesActionsCallbackInterface;
     private readonly InputAction m_Acciones_Moverse;
     private readonly InputAction m_Acciones_Atacar;
+    private readonly InputAction m_Acciones_Pausa;
     public struct AccionesActions
     {
         private @Payaso m_Wrapper;
         public AccionesActions(@Payaso wrapper) { m_Wrapper = wrapper; }
         public InputAction @Moverse => m_Wrapper.m_Acciones_Moverse;
         public InputAction @Atacar => m_Wrapper.m_Acciones_Atacar;
+        public InputAction @Pausa => m_Wrapper.m_Acciones_Pausa;
         public InputActionMap Get() { return m_Wrapper.m_Acciones; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -883,6 +894,9 @@ public class @Payaso : IInputActionCollection, IDisposable
                 @Atacar.started -= m_Wrapper.m_AccionesActionsCallbackInterface.OnAtacar;
                 @Atacar.performed -= m_Wrapper.m_AccionesActionsCallbackInterface.OnAtacar;
                 @Atacar.canceled -= m_Wrapper.m_AccionesActionsCallbackInterface.OnAtacar;
+                @Pausa.started -= m_Wrapper.m_AccionesActionsCallbackInterface.OnPausa;
+                @Pausa.performed -= m_Wrapper.m_AccionesActionsCallbackInterface.OnPausa;
+                @Pausa.canceled -= m_Wrapper.m_AccionesActionsCallbackInterface.OnPausa;
             }
             m_Wrapper.m_AccionesActionsCallbackInterface = instance;
             if (instance != null)
@@ -893,6 +907,9 @@ public class @Payaso : IInputActionCollection, IDisposable
                 @Atacar.started += instance.OnAtacar;
                 @Atacar.performed += instance.OnAtacar;
                 @Atacar.canceled += instance.OnAtacar;
+                @Pausa.started += instance.OnPausa;
+                @Pausa.performed += instance.OnPausa;
+                @Pausa.canceled += instance.OnPausa;
             }
         }
     }
@@ -1051,6 +1068,7 @@ public class @Payaso : IInputActionCollection, IDisposable
     {
         void OnMoverse(InputAction.CallbackContext context);
         void OnAtacar(InputAction.CallbackContext context);
+        void OnPausa(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
