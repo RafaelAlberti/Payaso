@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public void SumarMonedas(int monedasSumar)
     {
         monedasTotales += monedasSumar;
-        Debug.Log(monedasTotales);
+        
     }
 
 
