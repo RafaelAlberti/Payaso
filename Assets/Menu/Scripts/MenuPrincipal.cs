@@ -10,7 +10,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void EmpezarJuego()
     {
-        SceneManager.LoadScene("Game", LoadSceneMode.Single);
+        SceneManager.LoadScene("Nivel-1", LoadSceneMode.Single);
     }
 
     public void Opciones()
