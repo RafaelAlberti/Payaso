@@ -55,7 +55,6 @@
   <ItemGroup>
     <Compile Include="Assets\Game\Scripts\Personaje\PowerUP.cs" />
     <Compile Include="Assets\Menu\Scripts\LogicaVolumen.cs" />
-    <Compile Include="Assets\Game\Scripts\Personaje\ComprobarSuelo.cs" />
     <Compile Include="Assets\Game\Scripts\UI\Vover.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\Movimiento.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\Ganar.cs" />
@@ -64,15 +63,18 @@
     <Compile Include="Assets\Game\Scripts\Personaje\Bala.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\Disparar.cs" />
     <Compile Include="Assets\Menu\Scripts\MenuManager.cs" />
+    <Compile Include="Assets\Game\Scripts\Personaje\Vida.cs" />
     <Compile Include="Assets\Game\Scripts\Objetos\Moneda.cs" />
     <Compile Include="Assets\Game\Scripts\UI\MenuPausa.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\Muerte.cs" />
     <Compile Include="Assets\Game\Scripts\UI\HUD.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\PersonajeAnimaciones.cs" />
     <Compile Include="Assets\Menu\Scripts\MenuPrincipal.cs" />
-    <Compile Include="Assets\Game\Managers\InputManager.cs" />
-    <Compile Include="Assets\Game\Scripts\Personaje\Vida.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\SpawnPoint.cs" />
+    <Compile Include="Assets\Game\Managers\InputManager.cs" />
+    <Compile Include="Assets\Game\Scripts\Enemigos\Estrella.cs" />
+    <Compile Include="Assets\Game\Scripts\Enemigos\EnemigoDisparo.cs" />
+    <Compile Include="Assets\Game\Scripts\Objetos\PasarNivel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Menu\TextMesh Pro\Shaders\TMPro.cginc" />

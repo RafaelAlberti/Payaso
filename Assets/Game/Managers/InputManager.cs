@@ -7,10 +7,10 @@ public class InputManager : MonoBehaviour
 {
     Movimiento movimiento;
    
-    PlayerInput playerInput;
+    
     void Start()
     {
-        playerInput = GetComponent<PlayerInput>();
+        
         movimiento = GetComponent<Movimiento>();
         
     }
@@ -22,9 +22,7 @@ public class InputManager : MonoBehaviour
 
     void OnMovimiento(InputValue Valor)
     {
-        /**Vector2 Direccion = Valor.Get<Vector2>();
-        movimiento.EntradaInput(Direccion.x);**/
-
+        
     }
  
 

@@ -6,31 +6,33 @@ using UnityEngine.InputSystem;
 public class Movimiento : MonoBehaviour
 {
     PlayerInput playerInput;
-    Transform Jugador;
-    public float saltar = 5.0f;
-    public float velocidad = 5.0f;
+    private BoxCollider2D boxCollider;
+    [SerializeField]private float salto = 7.0f;
+    [SerializeField]private float velocidad = 5.0f;
     private Animator Animator;
-    public Vector2 Direccion;
+    private Vector2 Direccion;
+    private Rigidbody2D rgb2d;
+    [SerializeField]private LayerMask capaSuelo;
 
 
     void Start()
     {
-        Jugador = GetComponent<Transform>();
+        rgb2d = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
         Animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
         Morir();
-        Animacion();
+        Moverse();
+        Saltar();
     }
 
     void FixedUpdate()
     {
-        Moverse();
-        Saltar();
-        
+        Animacion();
     }
 
     public void OnMoverse(InputValue valor)
@@ -39,24 +41,45 @@ public class Movimiento : MonoBehaviour
         
     }
 
+    bool Suelo()
+    {
+       RaycastHit2D raycast =  Physics2D.BoxCast(boxCollider.bounds.center,
+           new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y),
+           0f, Vector2.down, 0.2f, capaSuelo);
+
+        return raycast.collider != null;
+    }
+
     public void Moverse()
     {
-        Jugador.Translate(Vector3.right * Direccion * Time.deltaTime * this.velocidad);
+        rgb2d.velocity = new Vector2(Direccion.x * velocidad, rgb2d.velocity.y);
+        
+        Orientacion();
+    }
 
-        if (Direccion.x >= 0)
+
+   void Orientacion() {
+        if (rgb2d.velocity.x > 0)
         {
-            Jugador.localScale = new Vector3(1, 1, 1);
+            rgb2d.transform.localScale = new Vector3(1,1,1);
+
+        } else if (rgb2d.velocity.x < 0 )
+        {
+            rgb2d.transform.localScale = new Vector3(-1,1,1);
         }
-        else
+
+    }
+
+
+    public void Saltar()
+    {
+        
+        if (Suelo() == true)
         {
-            Jugador.localScale = new Vector3(-1, 1, 1);
+         rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto * Direccion.y);
         }
     }
 
-   public void Saltar()
-    { 
-       Jugador.Translate(Vector3.up * this.Direccion.y * Time.deltaTime * this.saltar);
-    }
 
     public void Morir()
     {
@@ -71,7 +94,7 @@ public class Movimiento : MonoBehaviour
     public void Animacion()
     {
         Animator.SetFloat("Velocidad", Mathf.Abs(Direccion.x));
-        Animator.SetBool("Suelo", ComprobarSuelo.Suelo);
+        Animator.SetBool("Suelo",Suelo());
         Animator.SetBool("Disparar", Disparar.Disparo);
     }
    

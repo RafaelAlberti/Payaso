@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class PersonajeAnimaciones : MonoBehaviour
 {
-    private Movimiento mov;
-    private Animator Animator;
+  
     void Start()
     {
-        Animator = GetComponent<Animator>();
-        mov = GetComponent<Movimiento>();
+      
     }
 
     
@@ -20,9 +18,7 @@ public class PersonajeAnimaciones : MonoBehaviour
 
     public void Animacion()
     {
-        Animator.SetFloat("Velocidad", Mathf.Abs(mov.Direccion.x));
-        Animator.SetBool("Suelo", ComprobarSuelo.Suelo);
-        Animator.SetBool("Disparar", Disparar.Disparo);
+        
     }
 
     

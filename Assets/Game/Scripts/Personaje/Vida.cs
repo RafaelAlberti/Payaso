@@ -21,6 +21,12 @@ public class Vida : MonoBehaviour
     void Update()
     {
         
+        if(cantidadCorazones <= 0)
+        {
+            Destroy(gameObject);
+            Destroy(corazon);
+        }
+
     }
 
 
@@ -30,10 +36,19 @@ public class Vida : MonoBehaviour
 
         for (int i = 0; i < cantidadCorazones; i++)
         {
-
             Image NewCorazon = Instantiate(corazon, PosicionCor.position, Quaternion.identity);
             NewCorazon.transform.SetParent(HUD.transform);
             PosicionCor.position = new Vector2(PosicionCor.position.x + Interlineado, PosicionCor.position.y);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Estrella")
+        {
+            Destroy(HUD.transform.GetChild(cantidadCorazones + 1).gameObject);
+            cantidadCorazones = -1;
+            Destroy(collision.gameObject);
         }
     }
 }
