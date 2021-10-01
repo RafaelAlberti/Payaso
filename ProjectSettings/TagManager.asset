@@ -10,6 +10,7 @@ TagManager:
   - Moneda
   - Enemigo
   - Estrellas
+  - Boss
   layers:
   - Default
   - TransparentFX

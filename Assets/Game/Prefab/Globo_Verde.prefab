@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1511967734761512313}
   - component: {fileID: 1511967734761512314}
   - component: {fileID: 1511967734761512319}
-  - component: {fileID: 1511967734761512318}
+  - component: {fileID: 4881972605246185354}
   m_Layer: 9
   m_Name: Globo_Verde
   m_TagString: PowerUP
@@ -120,7 +120,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01, y: -0.4176402}
   m_Size: {x: 0.5577965, y: 0.72217035}
   m_Direction: 0
---- !u!114 &1511967734761512318
+--- !u!114 &4881972605246185354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,6 +129,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1511967734761512315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68dd8e6fc50da944a9c32d74a082054d, type: 3}
+  m_Script: {fileID: 11500000, guid: 89567b615a469f84c9b3065c5a520720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corazon: {fileID: 0}
+  cantidadCorazones: 0
+  PosicionCorazonInicial: {fileID: 0}
+  HUD: {fileID: 0}

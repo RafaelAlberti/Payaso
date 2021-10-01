@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,8 @@ public class Disparar : MonoBehaviour
     PlayerInput Input;
     [SerializeField] Transform PuntodeDisparo;
     [SerializeField] private GameObject bala;
-    public static bool Disparo = false;
+    float disparo;
+    public static bool DisparoEstado;
 
     void Start()
     {
@@ -22,14 +24,24 @@ public class Disparar : MonoBehaviour
         
     }
 
-    public void OnAtacar()
+   
+    public void OnAtacar(InputValue valor)
     {
+        DisparoEstado = false;
+        disparo = valor.Get<float>();
         
         Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
-        Disparo = true;
-    }   
-            
-    
-   
- 
+        Estado();
+    }
+
+    bool Estado()
+    {
+        if (disparo >= 0) {
+            return DisparoEstado = true;
+        } else
+        {
+            return DisparoEstado = false;
+        }
+
+    } 
 }

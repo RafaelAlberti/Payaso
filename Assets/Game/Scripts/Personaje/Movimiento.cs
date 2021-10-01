@@ -73,10 +73,9 @@ public class Movimiento : MonoBehaviour
 
     public void Saltar()
     {
-        
         if (Suelo() == true)
         {
-         rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto * Direccion.y);
+          rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto * Direccion.y);
         }
     }
 
@@ -87,15 +86,13 @@ public class Movimiento : MonoBehaviour
         {
             Animator.SetBool("Muerte", Muerte.MuertePersonaje);
         }
-
-
     }
 
     public void Animacion()
     {
         Animator.SetFloat("Velocidad", Mathf.Abs(Direccion.x));
         Animator.SetBool("Suelo",Suelo());
-        Animator.SetBool("Disparar", Disparar.Disparo);
+        Animator.SetBool("Disparar", Disparar.DisparoEstado);
     }
    
 }

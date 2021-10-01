@@ -4,32 +4,23 @@ using UnityEngine;
 
 public class Muerte : MonoBehaviour
 {
-    public Vida vida;
+    [SerializeField] private GameObject Perdiste;
     public static bool MuertePersonaje = false;
 
-    [SerializeField] private GameObject Perdiste;
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.tag == "Player")
         {
+            Perdiste.SetActive(true);
             MuertePersonaje = true;
+            Time.timeScale = 0;
         }
 
     }
 
-    private void OnTriggerExit2D(Collider2D collision ) 
-    {
-
-        if (collision.gameObject.tag == "Player")
-        {
-            MuertePersonaje = false;
-        }
-
-
-    }
+    
 
    private void Update()
     {

@@ -11,6 +11,7 @@ public class Vida : MonoBehaviour
     public Canvas HUD;
    [SerializeField,Range(0,120)] private int Interlineado;
     
+
     void Start()
     {
 
@@ -44,11 +45,16 @@ public class Vida : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Estrella")
+        if (collision.gameObject.tag == "Muerte")
         {
             Destroy(HUD.transform.GetChild(cantidadCorazones + 1).gameObject);
             cantidadCorazones = -1;
-            Destroy(collision.gameObject);
+            
         }
     }
+
+    
+
+
 }
+

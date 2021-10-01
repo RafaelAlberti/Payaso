@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9141765684334553372}
   - component: {fileID: 9141765684334553371}
   - component: {fileID: 9141765684334553374}
-  - component: {fileID: 9141765684334553375}
+  - component: {fileID: 6860303043470694189}
   m_Layer: 0
   m_Name: Globo_Rojo
   m_TagString: PowerUP
@@ -120,7 +120,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01, y: -0.4176402}
   m_Size: {x: 0.5577965, y: 0.72217035}
   m_Direction: 0
---- !u!114 &9141765684334553375
+--- !u!114 &6860303043470694189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,6 +129,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9141765684334553370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68dd8e6fc50da944a9c32d74a082054d, type: 3}
+  m_Script: {fileID: 11500000, guid: cd1fe0ef150a84642b1adb80512703f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corazon: {fileID: 1346889923771961622, guid: 5dfdf2769d4472a46852825eb2397e3c, type: 3}
+  PosicionCorazonInicial: {fileID: 0}
+  HUD: {fileID: 0}
+  Interlineado: 80
