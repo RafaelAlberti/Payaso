@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -3246272332810431023}
   - component: {fileID: 2150182851925686168}
   - component: {fileID: 4912769746031860171}
+  - component: {fileID: 4660242660651006842}
   m_Layer: 0
   m_Name: Payaso
   m_TagString: Player
@@ -187,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   salto: 7
   velocidad: 5
+  Direccion: {x: 0, y: 0}
   capaSuelo:
     serializedVersion: 2
     m_Bits: 0
@@ -251,6 +253,18 @@ MonoBehaviour:
   m_DefaultActionMap: Acciones
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4660242660651006842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785105960645062729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa8f8aa1009db94fb8e63da47419e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3426538311133275400
 GameObject:
   m_ObjectHideFlags: 0

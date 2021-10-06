@@ -9,9 +9,9 @@ public class Movimiento : MonoBehaviour
     private BoxCollider2D boxCollider;
     [SerializeField]private float salto = 7.0f;
     [SerializeField]private float velocidad = 5.0f;
-    private Animator Animator;
-    private Vector2 Direccion;
+    public  Vector2 Direccion;
     private Rigidbody2D rgb2d;
+    private float Potencia;
     [SerializeField]private LayerMask capaSuelo;
 
 
@@ -19,29 +19,25 @@ public class Movimiento : MonoBehaviour
     {
         rgb2d = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
-        Animator = GetComponent<Animator>();
+        
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
-        Morir();
-        Moverse();
-        Saltar();
+       Moverse();
+       Saltar();
     }
 
-    void FixedUpdate()
-    {
-        Animacion();
-    }
+   
 
     public void OnMoverse(InputValue valor)
     {
-        this.Direccion = valor.Get<Vector2>();
+       Direccion = valor.Get<Vector2>();
         
     }
 
-    bool Suelo()
+  public bool Suelo()
     {
        RaycastHit2D raycast =  Physics2D.BoxCast(boxCollider.bounds.center,
            new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y),
@@ -73,26 +69,26 @@ public class Movimiento : MonoBehaviour
 
     public void Saltar()
     {
+        Debug.Log(Direccion.y);
+
         if (Suelo() == true)
         {
-          rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto * Direccion.y);
+          rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto * direccion(Direccion.y));
         }
     }
 
 
-    public void Morir()
+
+    float direccion(float salto)
     {
-        if (Muerte.MuertePersonaje == true)
+        if (salto < 1)
         {
-            Animator.SetBool("Muerte", Muerte.MuertePersonaje);
+           float diferencia = 1 - salto;
+           Potencia = diferencia + salto;
         }
+
+        return Potencia;
     }
 
-    public void Animacion()
-    {
-        Animator.SetFloat("Velocidad", Mathf.Abs(Direccion.x));
-        Animator.SetBool("Suelo",Suelo());
-        Animator.SetBool("Disparar", Disparar.DisparoEstado);
-    }
-   
+    
 }
