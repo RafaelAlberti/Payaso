@@ -4,39 +4,18 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    
+
     [SerializeField] private GameObject Jugador;
     [SerializeField] private Transform PosicionSpawn;
-    
 
-    void Start()
+
+    private void Start()
     {
-
-    }
-
-    
-    void Update()
-    {
-        DestruirJugador();
         InstanciarJugador();
     }
-
-
-    private void DestruirJugador()
+    public void InstanciarJugador()
     {
-        if (Muerte.MuertePersonaje == true)
-        {
-            Destroy(Jugador, 1f);
-        }
-    }
-
-    private void InstanciarJugador()
-    {
-        if ( Muerte.MuertePersonaje == true)
-        {
-          GameObject NewJugador = Instantiate(Jugador, PosicionSpawn.position, Quaternion.identity);
-        }
-       
+        GameObject NewJugador = Instantiate(Jugador, PosicionSpawn.position, Quaternion.identity);
     }
 
 

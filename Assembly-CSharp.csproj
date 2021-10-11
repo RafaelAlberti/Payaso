@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8799A462-4DCE-AB9A-FB65-F2E040371D9B}</ProjectGuid>
+    <ProjectGuid>{A7B4C913-A629-7751-E0E7-D5F3C8E126CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,10 +55,13 @@
   <ItemGroup>
     <Compile Include="Assets\Game\Scripts\Enemigos\Estrella.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\PowerUP.cs" />
+    <Compile Include="Assets\Game\Scripts\Personaje\JugadorAtacar.cs" />
     <Compile Include="Assets\Menu\Scripts\LogicaVolumen.cs" />
     <Compile Include="Assets\Game\Scripts\Enemigos\Jefe.cs" />
     <Compile Include="Assets\Game\Scripts\UI\Vover.cs" />
+    <Compile Include="Assets\Game\Scripts\Personaje\JugadorController.cs" />
     <Compile Include="Assets\Game\Scripts\Objetos\GloboAzul.cs" />
+    <Compile Include="Assets\Game\Scripts\Personaje\JugadorMovimiento.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\Movimiento.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\Ganar.cs" />
     <Compile Include="Assets\Game\Managers\GameManager.cs" />
@@ -75,15 +78,14 @@
     <Compile Include="Assets\Game\Scripts\Personaje\Muerte.cs" />
     <Compile Include="Assets\Game\Scripts\Objetos\GloboVerde.cs" />
     <Compile Include="Assets\Game\Scripts\UI\HUD.cs" />
+    <Compile Include="Assets\Game\Scripts\Personaje\JugadorPowerUps.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\PersonajeAnimaciones.cs" />
+    <Compile Include="Assets\Game\Scripts\Personaje\JugadorAnimaciones.cs" />
     <Compile Include="Assets\Menu\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\SpawnPoint.cs" />
     <Compile Include="Assets\Game\Managers\InputManager.cs" />
-    <Compile Include="Assets\Game\Scripts\Personaje\JugadorMovimiento.cs" />
-    <Compile Include="Assets\Game\Scripts\Personaje\JugadorAnimaciones.cs" />
-    <Compile Include="Assets\Game\Scripts\Personaje\JugadorPowerUps.cs" />
-    <Compile Include="Assets\Game\Scripts\Personaje\JugadorAtacar.cs" />
-    <Compile Include="Assets\Game\Controller\JugadorController.cs" />
+    <Compile Include="Assets\Game\Managers\JugadorManager.cs" />
+    <Compile Include="Assets\Game\Managers\EnemigoManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Menu\TextMesh Pro\Shaders\TMPro.cginc" />
