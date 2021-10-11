@@ -5,21 +5,17 @@ using UnityEngine.InputSystem;
 
 public class Movimiento : MonoBehaviour
 {
-    PlayerInput playerInput;
     private BoxCollider2D boxCollider;
-    [SerializeField]private float salto = 7.0f;
-    [SerializeField]private float velocidad = 5.0f;
-    public  Vector2 Direccion;
+    [SerializeField] private float salto = 7.0f;
+    [SerializeField] private float velocidad = 5.0f;
+    public Vector2 Direccion;
     private Rigidbody2D rgb2d;
-    private float Potencia;
     [SerializeField]private LayerMask capaSuelo;
 
 
     void Start()
     {
-        rgb2d = GetComponent<Rigidbody2D>();
-        playerInput = GetComponent<PlayerInput>();
-        
+        rgb2d = GetComponent<Rigidbody2D>();     
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -69,26 +65,9 @@ public class Movimiento : MonoBehaviour
 
     public void Saltar()
     {
-        Debug.Log(Direccion.y);
-
-        if (Suelo() == true)
-        {
-          rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto * direccion(Direccion.y));
-        }
+      if (Suelo() == true)
+      {
+        rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto * Direccion.y);
+      }
     }
-
-
-
-    float direccion(float salto)
-    {
-        if (salto < 1)
-        {
-           float diferencia = 1 - salto;
-           Potencia = diferencia + salto;
-        }
-
-        return Potencia;
-    }
-
-    
 }

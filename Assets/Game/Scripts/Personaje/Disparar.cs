@@ -27,21 +27,8 @@ public class Disparar : MonoBehaviour
    
     public void OnAtacar(InputValue valor)
     {
-        DisparoEstado = false;
-        disparo = valor.Get<float>();
         
         Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
-        Estado();
     }
 
-    bool Estado()
-    {
-        if (disparo >= 0) {
-            return DisparoEstado = true;
-        } else
-        {
-            return DisparoEstado = false;
-        }
-
-    } 
-}
+  }

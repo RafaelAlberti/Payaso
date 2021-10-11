@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725f4511dad81a4abdad546738331f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuntodeDisparo: {fileID: 0}
+  PuntodeDisparo: {fileID: 2150700850221063732}
   bala: {fileID: 4136755578685732396, guid: d90bc8ab2f539aa4c817edd2e638f793, type: 3}
 --- !u!114 &2150182851925686168
 MonoBehaviour:

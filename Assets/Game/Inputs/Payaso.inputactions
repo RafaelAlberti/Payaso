@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "Moverse",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "13323124-0ce5-4aa4-95dd-880d36f4a4f8",
                     "expectedControlType": "Vector2",
                     "processors": "",
@@ -98,50 +98,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Joystick",
-                    "id": "0b24a742-806a-4796-9fb9-9835902d3117",
-                    "path": "2DVector(mode=1)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moverse",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "5b194ff5-518a-499f-9de6-dec8c605756e",
-                    "path": "<Joystick>/stick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moverse",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "b8324725-3644-4bcc-b87b-7b98f6fb1b9c",
-                    "path": "<Joystick>/stick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moverse",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "2d9d44ad-6be7-485b-ae27-8ccf1072ec1b",
-                    "path": "<Joystick>/stick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moverse",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "Teclado Flechas",
                     "id": "a050282b-18ba-4278-b0d8-94f11da9e7c4",
                     "path": "2DVector",
@@ -186,6 +142,50 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "Joystick",
+                    "id": "ce440165-1c26-4119-baff-67e40320ac77",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moverse",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "029c8c7b-f139-4126-a3f9-c29e9f2a7987",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Moverse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "4a21f6b1-4485-4748-8a04-4080c562fe5f",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Moverse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "29f7cebb-02a1-48c7-89dc-4f17b381af5f",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Moverse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "0820c3c6-6200-4782-a350-bac7a7915cf0",
                     "path": "<Keyboard>/escape",
@@ -213,7 +213,7 @@
                     "path": "<DualShockGamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Pausa",
                     "isComposite": false,
                     "isPartOfComposite": false

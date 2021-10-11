@@ -4,8 +4,26 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager gameManager;
     public int MonedasTotales { get { return monedasTotales; } }
     private int monedasTotales;
+   
+  
+
+
+    public void Awake()
+    {
+       if(GameManager.gameManager == null)
+        {
+            GameManager.gameManager = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+       else 
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
 
 
     public void SumarMonedas(int monedasSumar)
@@ -18,12 +36,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+     
     }
 
     
     void Update()
     {
-        
+      
     }
 }
