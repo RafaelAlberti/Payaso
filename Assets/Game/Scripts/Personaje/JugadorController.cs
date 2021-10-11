@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class JugadorController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public JugadorAnimaciones animaciones;
+    public JugadorAtacar atacar;
+    public JugadorMovimiento movimiento;
     void Start()
     {
         

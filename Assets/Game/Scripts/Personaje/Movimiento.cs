@@ -6,13 +6,12 @@ using UnityEngine.InputSystem;
 public class Movimiento : MonoBehaviour
 {
     private BoxCollider2D boxCollider;
-    [SerializeField] private float salto = 7.0f;
-    [SerializeField] private float velocidad = 5.0f;
     public Vector2 Direccion;
     private Rigidbody2D rgb2d;
+    [SerializeField] private float salto = 7.0f;
+    [SerializeField] private float velocidad = 5.0f;
     [SerializeField]private LayerMask capaSuelo;
-
-
+    
     void Start()
     {
         rgb2d = GetComponent<Rigidbody2D>();     
