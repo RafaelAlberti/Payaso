@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class JugadorAnimaciones : MonoBehaviour
 {
-    Movimiento mov;
+    [SerializeField] JugadorController jugadorController;
     private Animator Animator;
 
     void Start()
     {
-        mov = GetComponent<Movimiento>();
+        jugadorController = GetComponent<JugadorController>();
         Animator = GetComponent<Animator>();
     }
 
@@ -19,19 +19,13 @@ public class JugadorAnimaciones : MonoBehaviour
         Animacion();
     }
 
-    public void Morir()
-    {
-        if (Muerte.MuertePersonaje == true)
-        {
-            Animator.SetBool("Muerte", Muerte.MuertePersonaje);
-        }
-    }
-
+    
     public void Animacion()
-    {
-        Animator.SetFloat("Velocidad", Mathf.Abs(mov.Direccion.x));
-        Animator.SetBool("Suelo", mov.Suelo());
-        Animator.SetBool("Disparar", Disparar.DisparoEstado);
+    {   
+       //Animator.SetBool("Muerte", Muerte.MuertePersonaje);
+       //Animator.SetFloat("Velocidad", Mathf.Abs(mov.Direccion.x));
+       //Animator.SetBool("Suelo", mov.Suelo());
+       //Animator.SetBool("Disparar", Disparar.DisparoEstado);
     }
 
 

@@ -8,22 +8,21 @@ public class JugadorMovimiento : MonoBehaviour
     [SerializeField] private LayerMask capaSuelo;
     [SerializeField] private float salto = 7.0f;
     [SerializeField] private float velocidad = 5.0f;
-    public Vector2 Direccion;
+    private Vector2 Direccion;
     private Rigidbody2D rgb2d;
     private BoxCollider2D boxCollider;
     
 
-
     void Start()
     {
-        rgb2d = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        this.rgb2d = GetComponent<Rigidbody2D>();
+        this.boxCollider = GetComponent<BoxCollider2D>();
     }
+
 
     public void Moverse()
     {
         rgb2d.velocity = new Vector2(Direccion.x * velocidad, rgb2d.velocity.y);
-
         Orientacion();
     }
 
@@ -42,6 +41,7 @@ public class JugadorMovimiento : MonoBehaviour
 
     }
 
+
     public bool Suelo()
     {
         RaycastHit2D raycast = Physics2D.BoxCast(boxCollider.bounds.center,
@@ -50,6 +50,8 @@ public class JugadorMovimiento : MonoBehaviour
 
         return raycast.collider != null;
     }
+
+
     public void Saltar()
     {
         if (Suelo() == true)

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class JugadorPowerUps : MonoBehaviour
 {
@@ -11,10 +10,12 @@ public class JugadorPowerUps : MonoBehaviour
         
     }
 
+
     void Update()
     {
         
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,19 +36,23 @@ public class JugadorPowerUps : MonoBehaviour
 
     }
 
+
     public void GloboRojo()
     {
-
+        Debug.Log("Hola; Yo soy el globo rojo con el nuevo sistema");
     }
+
 
     public void GloboAzul()
     {
-
+        Debug.Log("Hola, Yo soy el globo azul con el nuevo sistema");
     }
+
 
     public void GloboVerde()
     {
-
+        Debug.Log("Hola; Yo soy el globo verde con el nuevo sistema");
     }
+
 
 }

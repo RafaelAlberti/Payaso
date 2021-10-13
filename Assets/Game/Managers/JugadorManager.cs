@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class JugadorManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject Jugador;
+    [SerializeField] private Transform spawn;
+    public JugadorController jugadorController;
+   
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
     }
+
+
+    private void SpawnDePersonaje()
+    {
+        GameObject InstanciaJugador = Instantiate(Jugador, spawn.transform.position, Quaternion.identity);
+        InstanciaJugador.transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
+        jugadorController = GetComponent<JugadorController>();
+    }
+
 }

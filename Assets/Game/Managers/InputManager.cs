@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     public static InputManager Input;
-    public PlayerInput PlayerInput;
+    [SerializeField] private PlayerInput PlayerInput;
+
 
     public void Awake()
     {       
@@ -21,6 +22,7 @@ public class InputManager : MonoBehaviour
         }
     }
 
+
     private void Start()
     {
         PlayerInput = GetComponent<PlayerInput>();
@@ -32,9 +34,10 @@ public class InputManager : MonoBehaviour
         
     }
 
+
     void OnMovimiento(InputValue Valor)
     {
-        
+      GameManager.gameManager.jugadorManager.jugadorController.movimiento.Moverse();
     }
  
 

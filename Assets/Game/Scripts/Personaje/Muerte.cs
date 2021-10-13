@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Muerte : MonoBehaviour
-{
+
+{    public static bool MuertePersonaje;
     [SerializeField] private GameObject Perdiste;
-    public static bool MuertePersonaje = false;
+    
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.tag == "Player")
-        {
-            Perdiste.SetActive(true);
+        if (collision.CompareTag("Player") && MuertePersonaje == false)
+        {   
             MuertePersonaje = true;
+            Perdiste.SetActive(true);
             Time.timeScale = 0;
         }
-
+        
+        
     }
 
     

@@ -4,15 +4,45 @@ using UnityEngine;
 
 public class JugadorAtacar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] public JugadorController jugadorController;
+    [SerializeField] private GameObject bala;
+    [SerializeField] Transform PuntodeDisparo;
+    public static bool DisparoEstado;
+
     void Start()
     {
-        
+        jugadorController = GetComponent<JugadorController>();
     }
 
-    // Update is called once per frame
+        
     void Update()
     {
-        
+        VerificarEstado();
+    }
+
+
+    public bool VerificarEstado()
+    {
+
+        if (DisparoEstado == false)
+        {
+            DisparoEstado = true;
+        }
+        else
+        {
+            DisparoEstado = false;
+        }
+
+        return DisparoEstado;
+    }
+
+
+    public void Disparo()
+    {
+        if (DisparoEstado == false)
+        {
+            DisparoEstado = true;
+            Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
+        }
     }
 }

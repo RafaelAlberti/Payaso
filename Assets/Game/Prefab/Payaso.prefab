@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 1785105960645062774}
   - component: {fileID: 1785105960645062773}
   - component: {fileID: 1785105960645062768}
-  - component: {fileID: 1270620615485406024}
-  - component: {fileID: -3246272332810431023}
-  - component: {fileID: 2150182851925686168}
-  - component: {fileID: 4912769746031860171}
-  - component: {fileID: 4660242660651006842}
+  - component: {fileID: 8931552112534664098}
+  - component: {fileID: 4151876921494610950}
+  - component: {fileID: 1275662170853410433}
+  - component: {fileID: 740505150214025733}
+  - component: {fileID: 8197263147633011924}
   m_Layer: 0
   m_Name: Payaso
   m_TagString: Player
@@ -171,10 +171,10 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.018144282, y: -0.75782204}
-  m_Size: {x: 1.3959105, y: 0.19339183}
+  m_Offset: {x: 0.005097018, y: -1.1187866}
+  m_Size: {x: 2.1874344, y: 0.21948555}
   m_Direction: 1
---- !u!114 &1270620615485406024
+--- !u!114 &8931552112534664098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,77 +183,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1785105960645062729}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b90d06afc536b04e9533c0e9fc51aba, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e0aa8346f1c31842b4aeeaf9f9fe12d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direccion: {x: 0, y: 0}
-  salto: 7
-  velocidad: 5
-  capaSuelo:
-    serializedVersion: 2
-    m_Bits: 0
---- !u!114 &-3246272332810431023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785105960645062729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f725f4511dad81a4abdad546738331f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PuntodeDisparo: {fileID: 2150700850221063732}
-  bala: {fileID: 4136755578685732396, guid: d90bc8ab2f539aa4c817edd2e638f793, type: 3}
---- !u!114 &2150182851925686168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785105960645062729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f3966467f2fe545b0f23cfb33e1f57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  corazon: {fileID: 0}
-  cantidadCorazones: 0
-  PosicionCorazonInicial: {fileID: 0}
-  HUD: {fileID: 0}
-  Interlineado: 0
---- !u!114 &4912769746031860171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785105960645062729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 039c0c99ae922b4498c995b1b63d80cc, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Acciones
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &4660242660651006842
+  animaciones: {fileID: 4151876921494610950}
+  atacar: {fileID: 1275662170853410433}
+  movimiento: {fileID: 740505150214025733}
+  powerUps: {fileID: 8197263147633011924}
+--- !u!114 &4151876921494610950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,6 +200,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fa8f8aa1009db94fb8e63da47419e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugadorController: {fileID: 0}
+--- !u!114 &1275662170853410433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785105960645062729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4b65180163c2c47b009f0fb6d47111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &740505150214025733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785105960645062729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b0f7ee74b7d75429f4a4ec616816ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capaSuelo:
+    serializedVersion: 2
+    m_Bits: 256
+  salto: 7
+  velocidad: 5
+  Direccion: {x: 0, y: 0}
+--- !u!114 &8197263147633011924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785105960645062729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0605b1d87a99d48b5c20d7729d269e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3426538311133275400
