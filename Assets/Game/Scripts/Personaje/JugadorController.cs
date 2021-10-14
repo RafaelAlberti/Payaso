@@ -16,4 +16,6 @@ public class JugadorController : MonoBehaviour
        this.movimiento = GetComponent<JugadorMovimiento>();
        this.powerUps = GetComponent<JugadorPowerUps>();
     }
+
+
 }
