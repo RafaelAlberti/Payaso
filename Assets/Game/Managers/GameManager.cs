@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
+    public JugadorManager jugadorManager;
     public int MonedasTotales { get { return monedasTotales; } }
     private int monedasTotales;
    
@@ -25,6 +26,12 @@ public class GameManager : MonoBehaviour
     }
 
 
+ void Start()
+    {
+
+        jugadorManager = GameObject.Find("Jugador").GetComponent<JugadorManager>();
+        jugadorManager.SpawnDePersonaje();
+    }
 
     public void SumarMonedas(int monedasSumar)
     {
@@ -34,11 +41,7 @@ public class GameManager : MonoBehaviour
 
 
 
-    void Start()
-    {
-     
-    }
-
+   
     
     void Update()
     {

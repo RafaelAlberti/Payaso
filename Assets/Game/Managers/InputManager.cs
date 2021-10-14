@@ -5,14 +5,16 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    public static InputManager Input;
-    public PlayerInput PlayerInput;
 
-    public void Awake()
+    public static InputManager InputManagerInstanciado;
+    PlayerInput PlayerInput;
+
+
+    void Awake()
     {       
-        if (InputManager.Input == null)
+        if (InputManager.InputManagerInstanciado == null)
         {
-           InputManager.Input = this;
+           InputManager.InputManagerInstanciado = this;
             DontDestroyOnLoad(this.gameObject);
         }
         else
@@ -21,20 +23,24 @@ public class InputManager : MonoBehaviour
         }
     }
 
+
     private void Start()
     {
-        PlayerInput = GetComponent<PlayerInput>();
+       this.PlayerInput = GetComponent<PlayerInput>();
     }
 
 
-    void OnAtacar(InputValue Valor)
+    public void OnAtacar(InputValue Valor)
     {
-        
+        GameManager.gameManager.jugadorManager.jugadorController.atacar.Disparo();
+        Debug.Log("Atacando");
     }
 
-    void OnMovimiento(InputValue Valor)
+
+    public void OnMoverse(InputValue Valor)
     {
-        
+      Vector2 InputValor = Valor.Get<Vector2>();
+      GameManager.gameManager.jugadorManager.jugadorController.movimiento.Direccion(InputValor.x);
     }
  
 

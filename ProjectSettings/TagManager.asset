@@ -5,12 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - World
-  - PowerUP
   - Muerte
   - Moneda
   - Enemigo
   - Estrellas
   - Boss
+  - Azul
+  - Rojo
+  - Verde
+  - PowerUP
   layers:
   - Default
   - TransparentFX

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class JugadorController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public JugadorAnimaciones animaciones;
+    public JugadorAtacar atacar;
+    public JugadorMovimiento movimiento;
+    public JugadorPowerUps powerUps;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+       this.animaciones = GetComponent<JugadorAnimaciones>();
+       this.atacar = GetComponent<JugadorAtacar>();
+       this.movimiento = GetComponent<JugadorMovimiento>();
+       this.powerUps = GetComponent<JugadorPowerUps>();
     }
 }
