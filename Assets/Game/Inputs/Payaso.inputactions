@@ -28,6 +28,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Saltar",
+                    "type": "Button",
+                    "id": "d681f8e8-6ef8-4cbf-b93d-ba3ea85eddd9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -63,17 +71,6 @@
                     "action": "Moverse",
                     "isComposite": true,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "0a0cfa3c-7725-4a57-ba73-f73e7fc384d3",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Moverse",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "left",
@@ -215,6 +212,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9efc424-43f9-406d-ad6f-badb5e1b8cd2",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Saltar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

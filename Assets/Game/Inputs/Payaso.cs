@@ -41,6 +41,14 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Saltar"",
+                    ""type"": ""Button"",
+                    ""id"": ""d681f8e8-6ef8-4cbf-b93d-ba3ea85eddd9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -76,17 +84,6 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""action"": ""Moverse"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""0a0cfa3c-7725-4a57-ba73-f73e7fc384d3"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Moverse"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
@@ -228,6 +225,17 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Pausa"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a9efc424-43f9-406d-ad6f-badb5e1b8cd2"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Saltar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -808,6 +816,7 @@ public class @Payaso : IInputActionCollection, IDisposable
         m_Acciones_Moverse = m_Acciones.FindAction("Moverse", throwIfNotFound: true);
         m_Acciones_Atacar = m_Acciones.FindAction("Atacar", throwIfNotFound: true);
         m_Acciones_Pausa = m_Acciones.FindAction("Pausa", throwIfNotFound: true);
+        m_Acciones_Saltar = m_Acciones.FindAction("Saltar", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -872,6 +881,7 @@ public class @Payaso : IInputActionCollection, IDisposable
     private readonly InputAction m_Acciones_Moverse;
     private readonly InputAction m_Acciones_Atacar;
     private readonly InputAction m_Acciones_Pausa;
+    private readonly InputAction m_Acciones_Saltar;
     public struct AccionesActions
     {
         private @Payaso m_Wrapper;
@@ -879,6 +889,7 @@ public class @Payaso : IInputActionCollection, IDisposable
         public InputAction @Moverse => m_Wrapper.m_Acciones_Moverse;
         public InputAction @Atacar => m_Wrapper.m_Acciones_Atacar;
         public InputAction @Pausa => m_Wrapper.m_Acciones_Pausa;
+        public InputAction @Saltar => m_Wrapper.m_Acciones_Saltar;
         public InputActionMap Get() { return m_Wrapper.m_Acciones; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -897,6 +908,9 @@ public class @Payaso : IInputActionCollection, IDisposable
                 @Pausa.started -= m_Wrapper.m_AccionesActionsCallbackInterface.OnPausa;
                 @Pausa.performed -= m_Wrapper.m_AccionesActionsCallbackInterface.OnPausa;
                 @Pausa.canceled -= m_Wrapper.m_AccionesActionsCallbackInterface.OnPausa;
+                @Saltar.started -= m_Wrapper.m_AccionesActionsCallbackInterface.OnSaltar;
+                @Saltar.performed -= m_Wrapper.m_AccionesActionsCallbackInterface.OnSaltar;
+                @Saltar.canceled -= m_Wrapper.m_AccionesActionsCallbackInterface.OnSaltar;
             }
             m_Wrapper.m_AccionesActionsCallbackInterface = instance;
             if (instance != null)
@@ -910,6 +924,9 @@ public class @Payaso : IInputActionCollection, IDisposable
                 @Pausa.started += instance.OnPausa;
                 @Pausa.performed += instance.OnPausa;
                 @Pausa.canceled += instance.OnPausa;
+                @Saltar.started += instance.OnSaltar;
+                @Saltar.performed += instance.OnSaltar;
+                @Saltar.canceled += instance.OnSaltar;
             }
         }
     }
@@ -1069,6 +1086,7 @@ public class @Payaso : IInputActionCollection, IDisposable
         void OnMoverse(InputAction.CallbackContext context);
         void OnAtacar(InputAction.CallbackContext context);
         void OnPausa(InputAction.CallbackContext context);
+        void OnSaltar(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

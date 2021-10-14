@@ -33,15 +33,20 @@ public class InputManager : MonoBehaviour
     public void OnAtacar(InputValue Valor)
     {
         GameManager.gameManager.jugadorManager.jugadorController.atacar.Disparo();
-        Debug.Log("Atacando");
     }
 
 
     public void OnMoverse(InputValue Valor)
     {
       Vector2 InputValor = Valor.Get<Vector2>();
-      GameManager.gameManager.jugadorManager.jugadorController.movimiento.Direccion(InputValor.x);
+      GameManager.gameManager.jugadorManager.jugadorController.movimiento.Moverse(InputValor.x);
+      //GameManager.gameManager.jugadorManager.jugadorController.movimiento.Saltar(InputValor.y);
     }
- 
+
+    public void OnSaltar(InputValue Valor)
+    {
+       GameManager.gameManager.jugadorManager.jugadorController.movimiento.Saltar();
+    }
+
 
 }
