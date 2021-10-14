@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class JugadorPowerUps : MonoBehaviour
 {
-   
+    [SerializeField] JugadorController jugadorController;
     void Start()
     {
-        
+        this.jugadorController = GetComponent<JugadorController>();
     }
 
 

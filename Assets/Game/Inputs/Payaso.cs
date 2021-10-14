@@ -32,7 +32,7 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""id"": ""3bfd9fe3-c093-4327-a9bc-656b701d493f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Pausa"",
@@ -40,7 +40,7 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""id"": ""7ec0ef51-16af-44a8-bd24-37aded5c2513"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [

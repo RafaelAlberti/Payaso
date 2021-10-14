@@ -1,31 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class JugadorManager : MonoBehaviour
 {
     [SerializeField] private GameObject Jugador;
     [SerializeField] private Transform spawn;
     public JugadorController jugadorController;
-   
-
-    void Start()
+    GameObject InstanciaJugador;
+    public void SpawnDePersonaje()
     {
-        
-    }
 
-    
-    void Update()
-    {
-        
-    }
+        //this.jugadorController = null;
 
+        CinemachineVirtualCamera Camara = GameObject.Find("CamaraCinematica").GetComponent<CinemachineVirtualCamera>();
 
-    private void SpawnDePersonaje()
-    {
-        GameObject InstanciaJugador = Instantiate(Jugador, spawn.transform.position, Quaternion.identity);
-        InstanciaJugador.transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
-        jugadorController = GetComponent<JugadorController>();
+        this.InstanciaJugador = Instantiate(Jugador, spawn.transform.position, Quaternion.identity);
+
+        this.InstanciaJugador.transform.parent = GameObject.Find("Jugador").transform;
+
+        this.jugadorController = GetComponent<JugadorController>();
+
+        Camara.m_Follow = InstanciaJugador.transform;
     }
 
 }

@@ -26,6 +26,12 @@ public class GameManager : MonoBehaviour
     }
 
 
+ void Start()
+    {
+
+        jugadorManager = GameObject.Find("Jugador").GetComponent<JugadorManager>();
+        jugadorManager.SpawnDePersonaje();
+    }
 
     public void SumarMonedas(int monedasSumar)
     {
@@ -35,11 +41,7 @@ public class GameManager : MonoBehaviour
 
 
 
-    void Start()
-    {
-        jugadorManager = GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorManager>();
-    }
-
+   
     
     void Update()
     {

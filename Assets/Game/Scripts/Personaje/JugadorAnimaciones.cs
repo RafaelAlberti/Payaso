@@ -9,8 +9,8 @@ public class JugadorAnimaciones : MonoBehaviour
 
     void Start()
     {
-        jugadorController = GetComponent<JugadorController>();
-        Animator = GetComponent<Animator>();
+        this.jugadorController = GetComponent<JugadorController>();
+        this.Animator = GetComponent<Animator>();
     }
 
     

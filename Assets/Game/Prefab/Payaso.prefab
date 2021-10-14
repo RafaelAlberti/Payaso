@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa8f8aa1009db94fb8e63da47419e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugadorController: {fileID: 0}
+  jugadorController: {fileID: 8931552112534664098}
 --- !u!114 &1275662170853410433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4b65180163c2c47b009f0fb6d47111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jugadorController: {fileID: 8931552112534664098}
+  bala: {fileID: 4136755578685732396, guid: d90bc8ab2f539aa4c817edd2e638f793, type: 3}
+  PuntodeDisparo: {fileID: 2150700850221063732}
 --- !u!114 &740505150214025733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,12 +230,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b0f7ee74b7d75429f4a4ec616816ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jugadorController: {fileID: 8931552112534664098}
   capaSuelo:
     serializedVersion: 2
     m_Bits: 256
   salto: 7
   velocidad: 5
-  Direccion: {x: 0, y: 0}
 --- !u!114 &8197263147633011924
 MonoBehaviour:
   m_ObjectHideFlags: 0

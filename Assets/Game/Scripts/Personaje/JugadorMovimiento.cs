@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class JugadorMovimiento : MonoBehaviour
 {
-
-    [SerializeField] private LayerMask capaSuelo;
-    [SerializeField] private float salto = 7.0f;
-    [SerializeField] private float velocidad = 5.0f;
-    private Vector2 Direccion;
+    [SerializeField] JugadorController jugadorController;
+    [SerializeField] LayerMask capaSuelo;
+    [SerializeField, Range (0, 120)] float salto;
+    [SerializeField, Range(0, 120)]  float velocidad;
+   // private Vector2 Direccion;
     private Rigidbody2D rgb2d;
     private BoxCollider2D boxCollider;
+    float MovimientoHorizontal;
     
 
     void Start()
     {
+        this.jugadorController = GetComponent<JugadorController>();
         this.rgb2d = GetComponent<Rigidbody2D>();
         this.boxCollider = GetComponent<BoxCollider2D>();
     }
@@ -22,10 +24,23 @@ public class JugadorMovimiento : MonoBehaviour
 
     public void Moverse()
     {
-        rgb2d.velocity = new Vector2(Direccion.x * velocidad, rgb2d.velocity.y);
+        rgb2d.velocity = new Vector2(MovimientoHorizontal * velocidad, rgb2d.velocity.y);
         Orientacion();
     }
+    public void Saltar()
+    {
+        if (Suelo() == true)
+        {
+            rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto );
+        }
+    }
 
+
+    public void Direccion(float valor)
+    {
+       this.MovimientoHorizontal = valor;
+    }
+    
 
     void Orientacion()
     {
@@ -52,12 +67,6 @@ public class JugadorMovimiento : MonoBehaviour
     }
 
 
-    public void Saltar()
-    {
-        if (Suelo() == true)
-        {
-            rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto * Direccion.y);
-        }
-    }
+   
 
 }
