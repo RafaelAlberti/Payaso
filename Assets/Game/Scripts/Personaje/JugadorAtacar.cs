@@ -15,12 +15,6 @@ public class JugadorAtacar : MonoBehaviour
     }
 
         
-    void Update()
-    {
-        VerificarEstado();
-    }
-
-
     public bool VerificarEstado()
     {
 
@@ -45,4 +39,8 @@ public class JugadorAtacar : MonoBehaviour
             Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
         }
     }
+
+
+
+
 }

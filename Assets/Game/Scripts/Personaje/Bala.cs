@@ -23,7 +23,6 @@ public class Bala : MonoBehaviour
     private void MovimientoBala()
     {
         rb2d.velocity = transform.right * velocidad;
-        
     }
 
     private void DestruccionBala()

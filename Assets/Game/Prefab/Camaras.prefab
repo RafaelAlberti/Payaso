@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 4689967225882732409}
   - component: {fileID: 4689967225882732414}
   m_Layer: 0
-  m_Name: Camara Cinematica
+  m_Name: CamaraCinematica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

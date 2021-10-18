@@ -38,7 +38,7 @@ public class JugadorMovimiento : MonoBehaviour
     }
 
 
-    void Orientacion()
+    public void Orientacion()
     {
         if (rgb2d.velocity.x > 0)
         {
@@ -49,7 +49,7 @@ public class JugadorMovimiento : MonoBehaviour
         {
             rgb2d.transform.localScale = new Vector3(-1, 1, 1);
         }
-
+        
     }
 
 
