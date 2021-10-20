@@ -108926,11 +108926,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4689967224584257381, guid: cd650a7b533c2594db822a06285607cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 11.356644
       objectReference: {fileID: 0}
     - target: {fileID: 4689967224584257381, guid: cd650a7b533c2594db822a06285607cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7000003
+      value: 7.2682824
       objectReference: {fileID: 0}
     - target: {fileID: 4689967224584257382, guid: cd650a7b533c2594db822a06285607cb, type: 3}
       propertyPath: orthographic size
@@ -108964,6 +108964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CamaraCinematica
       objectReference: {fileID: 0}
+    - target: {fileID: 4689967225882732414, guid: cd650a7b533c2594db822a06285607cb, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 760888047}
     - target: {fileID: 4689967225882732415, guid: cd650a7b533c2594db822a06285607cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3

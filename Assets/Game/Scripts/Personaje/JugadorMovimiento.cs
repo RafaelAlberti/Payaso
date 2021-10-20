@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class JugadorMovimiento : MonoBehaviour
     [SerializeField, Range(0, 120)]  float velocidad;
     private Rigidbody2D rgb2d;
     private BoxCollider2D boxCollider;
-    float MovimientoHorizontal;
+    [NonSerialized] public float MovimientoHorizontal;
     
 
     void Start()
@@ -29,12 +30,14 @@ public class JugadorMovimiento : MonoBehaviour
     }
 
 
+    
     public void Saltar()
     {
         if (Suelo() == true)
         {
             rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto);
         }
+
     }
 
 
@@ -42,12 +45,12 @@ public class JugadorMovimiento : MonoBehaviour
     {
         if (rgb2d.velocity.x > 0)
         {
-            rgb2d.transform.localScale = new Vector3(1, 1, 1);
+            rgb2d.transform.eulerAngles = new Vector3(0, 0, 0);
 
         }
         else if (rgb2d.velocity.x < 0)
         {
-            rgb2d.transform.localScale = new Vector3(-1, 1, 1);
+            rgb2d.transform.eulerAngles = new Vector3(0, 180, 0);
         }
         
     }

@@ -171,8 +171,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016144931, y: 0.122093916}
-  m_Size: {x: 1.3969826, y: 2.0526748}
+  m_Offset: {x: 0.00088858604, y: 0.09370458}
+  m_Size: {x: 1.1358004, y: 1.9958961}
   m_Direction: 0
 --- !u!114 &8931552112534664098
 MonoBehaviour:
@@ -218,6 +218,7 @@ MonoBehaviour:
   jugadorController: {fileID: 8931552112534664098}
   bala: {fileID: 4136755578685732396, guid: d90bc8ab2f539aa4c817edd2e638f793, type: 3}
   PuntodeDisparo: {fileID: 2150700850221063732}
+  DisparoEstado: 0
 --- !u!114 &740505150214025733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,9 +273,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3426538311133275400}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.101, y: 0.522, z: -0.69011515}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.45, y: 0.7, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1785105960645062772}
   m_RootOrder: 0

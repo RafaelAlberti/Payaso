@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,7 +30,6 @@ public class InputManager : MonoBehaviour
        this.PlayerInput = GetComponent<PlayerInput>();
     }
 
-
     public void OnAtacar(InputValue Valor)
     {
         GameManager.gameManager.jugadorManager.jugadorController.atacar.Disparo();
@@ -40,7 +40,6 @@ public class InputManager : MonoBehaviour
     {
       Vector2 InputValor = Valor.Get<Vector2>();
       GameManager.gameManager.jugadorManager.jugadorController.movimiento.Moverse(InputValor.x);
-      //GameManager.gameManager.jugadorManager.jugadorController.movimiento.Saltar(InputValor.y);
     }
 
     public void OnSaltar(InputValue Valor)
