@@ -20,7 +20,8 @@ jobs:
         run:  Start-Process -Wait 'C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe'-ArgumentList "-nographics -batchmode -projectPath $projectPath  -executeMethod $BUILD_METHOD_WIN64 -quit"
       - name: Build For Windows 32 bits 
         run:  Start-Process -Wait 'C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe'-ArgumentList "-nographics -batchmode -projectPath $projectPath  -executeMethod $BUILD_METHOD_WIN32 -quit"
-        uses: Cctions/upload-artifact@v2
+       
+        uses: actions/upload-artifact@v2
         with:
           - name: SaveTheCircus
             path: Builds/'
