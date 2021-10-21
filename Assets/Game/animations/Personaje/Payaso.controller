@@ -39,27 +39,27 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3468959879013382442}
-    m_Position: {x: -220, y: 110, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 8122092947679020037}
     m_Position: {x: 0, y: 260, z: 0}
   - serializedVersion: 1
+    m_State: {fileID: 8122092947679020037}
+    m_Position: {x: 500, y: 260, z: 0}
+  - serializedVersion: 1
     m_State: {fileID: -619485141816219317}
-    m_Position: {x: 0, y: -80, z: 0}
+    m_Position: {x: 0, y: -100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5738962610112788121}
-    m_Position: {x: 410, y: 260, z: 0}
+    m_Position: {x: 720, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2233749311096153733}
-    m_Position: {x: 400, y: -80, z: 0}
+    m_Position: {x: 500, y: -100, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 1100, y: 80, z: 0}
+  m_AnyStatePosition: {x: -260, y: 170, z: 0}
   m_EntryPosition: {x: -210, y: 460, z: 0}
-  m_ExitPosition: {x: 930, y: 200, z: 0}
+  m_ExitPosition: {x: -260, y: 210, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 3468959879013382442}
 --- !u!1101 &-7746567256453054991
@@ -98,8 +98,11 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Suelo
     m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Velocidad
+    m_EventTreshold: 0.1
   - m_ConditionMode: 1
-    m_ConditionEvent: Disparar
+    m_ConditionEvent: Disparando
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2233749311096153733}
@@ -152,13 +155,7 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Suelo
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: Disparar
-    m_EventTreshold: 0
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3468959879013382442}
   m_Solo: 0
@@ -168,7 +165,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -214,9 +211,6 @@ AnimatorStateTransition:
     m_EventTreshold: 0.1
   - m_ConditionMode: 1
     m_ConditionEvent: Suelo
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Disparar
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8122092947679020037}
@@ -391,6 +385,12 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: Disparar
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Disparando
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -701,14 +701,14 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Disparar
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
     m_ConditionEvent: Suelo
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: Velocidad
     m_EventTreshold: 0.1
+  - m_ConditionMode: 1
+    m_ConditionEvent: Disparando
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2233749311096153733}
   m_Solo: 0

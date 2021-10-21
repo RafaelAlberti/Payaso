@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,8 +10,8 @@ public class JugadorMovimiento : MonoBehaviour
     [SerializeField, Range(0, 120)]  float velocidad;
     private Rigidbody2D rgb2d;
     private BoxCollider2D boxCollider;
-    [NonSerialized] public float MovimientoHorizontal;
-    
+    public float MovimientoHorizontal;
+
 
     void Start()
     {
@@ -35,11 +34,10 @@ public class JugadorMovimiento : MonoBehaviour
     {
         if (Suelo() == true)
         {
-            rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto);
+          rgb2d.AddForce(new Vector2(0, salto), ForceMode2D.Impulse);
         }
 
     }
-
 
     public void Orientacion()
     {
@@ -62,7 +60,7 @@ public class JugadorMovimiento : MonoBehaviour
                                new Vector2(boxCollider.bounds.size.x,boxCollider.bounds.size.y)
                                ,0f, Vector2.down, 0.2f, capaSuelo);
 
-        return raycast.collider != null;
+        return raycast;
     }
 
    

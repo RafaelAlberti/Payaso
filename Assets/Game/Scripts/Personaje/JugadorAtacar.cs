@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class JugadorAtacar : MonoBehaviour
 {
+
+
     [SerializeField] public JugadorController jugadorController;
     [SerializeField] private GameObject bala;
     [SerializeField] Transform PuntodeDisparo;
+    public string EstadoDisparo;
+
+
     void Start()
     {
        jugadorController = GetComponent<JugadorController>();
@@ -15,23 +20,23 @@ public class JugadorAtacar : MonoBehaviour
  
     public void Disparo()
     {
-        if ( ControlarSuelo() == true && ControlarVelocidad() < 0.1 )
+        if (ControlarSuelo() == true && ControlarVelocidad() < 0.1 )
         {
-            Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation); 
+          Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
         }
     }
 
 
    public bool ControlarSuelo( )
-   {
-       bool Quieto = GameManager.gameManager.jugadorManager.jugadorController.movimiento.Suelo();
-       return Quieto;
+   { 
+        bool Quieto = GameManager.gameManager.jugadorManager.jugadorController.movimiento.Suelo();
+        return Quieto; 
    }
    
 
    public float ControlarVelocidad()
    {
-       float Velocidad = GameManager.gameManager.jugadorManager.jugadorController.movimiento.MovimientoHorizontal;
+       float Velocidad = Mathf.Abs(GameManager.gameManager.jugadorManager.jugadorController.movimiento.MovimientoHorizontal);
        return Velocidad;
    }
 

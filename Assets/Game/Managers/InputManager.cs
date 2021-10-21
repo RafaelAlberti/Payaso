@@ -10,7 +10,6 @@ public class InputManager : MonoBehaviour
     public static InputManager InputManagerInstanciado;
     PlayerInput PlayerInput;
 
-
     void Awake()
     {       
         if (InputManager.InputManagerInstanciado == null)
