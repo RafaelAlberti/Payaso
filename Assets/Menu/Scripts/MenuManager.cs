@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static MenuManager menuManagerInstancia;
+    public MenuController menuController;
+
+    private void Awake()
     {
-        
+        if (MenuManager.menuManagerInstancia == null)
+        {
+            MenuManager.menuManagerInstancia = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
-    // Update is called once per frame
+
+    private void Start()
+    {
+        this.menuController = GetComponent<MenuController>();
+    }
+
+    
     void Update()
     {
         

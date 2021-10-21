@@ -6,42 +6,43 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
     public JugadorManager jugadorManager;
-    public int MonedasTotales { get { return monedasTotales; } }
-    private int monedasTotales;
+    public int MonedasTotales { get { return monedasTotalesSumadas; } }
+    private int monedasTotalesSumadas;
    
   
 
 
     public void Awake()
     {
-       if(GameManager.gameManager == null)
+        if (GameManager.gameManager == null)
         {
             GameManager.gameManager = this;
             DontDestroyOnLoad(this.gameObject);
+            
+
         }
-       else 
-        {
+        else 
+       {
             Destroy(this.gameObject);
-        }
+       }
+
     }
 
 
  void Start()
     {
 
-        jugadorManager = GameObject.Find("Jugador").GetComponent<JugadorManager>();
-        jugadorManager.SpawnDePersonaje();
+        this.jugadorManager = GameObject.Find("Jugador").GetComponent<JugadorManager>();
+        this.jugadorManager.SpawnDePersonaje();
     }
 
     public void SumarMonedas(int monedasSumar)
     {
-        monedasTotales += monedasSumar;
+      this.monedasTotalesSumadas += monedasSumar;
         
     }
 
-
-
-   
+  
     
     void Update()
     {

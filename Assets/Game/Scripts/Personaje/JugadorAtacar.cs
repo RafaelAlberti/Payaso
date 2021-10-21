@@ -4,45 +4,41 @@ using UnityEngine;
 
 public class JugadorAtacar : MonoBehaviour
 {
+
+
     [SerializeField] public JugadorController jugadorController;
     [SerializeField] private GameObject bala;
     [SerializeField] Transform PuntodeDisparo;
-    public static bool DisparoEstado;
+    public string EstadoDisparo;
+
 
     void Start()
     {
-        jugadorController = GetComponent<JugadorController>();
+       jugadorController = GetComponent<JugadorController>();
     }
 
-        
-    void Update()
-    {
-        VerificarEstado();
-    }
-
-
-    public bool VerificarEstado()
-    {
-
-        if (DisparoEstado == false)
-        {
-            DisparoEstado = true;
-        }
-        else
-        {
-            DisparoEstado = false;
-        }
-
-        return DisparoEstado;
-    }
-
-
+ 
     public void Disparo()
     {
-        if (DisparoEstado == false)
+        if (ControlarSuelo() == true && ControlarVelocidad() < 0.1 )
         {
-            DisparoEstado = true;
-            Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
+          Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
         }
     }
+
+
+   public bool ControlarSuelo( )
+   { 
+        bool Quieto = GameManager.gameManager.jugadorManager.jugadorController.movimiento.Suelo();
+        return Quieto; 
+   }
+   
+
+   public float ControlarVelocidad()
+   {
+       float Velocidad = Mathf.Abs(GameManager.gameManager.jugadorManager.jugadorController.movimiento.MovimientoHorizontal);
+       return Velocidad;
+   }
+
+
 }

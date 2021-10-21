@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1785105960645062731}
   - component: {fileID: 1785105960645062730}
   - component: {fileID: 1785105960645062774}
-  - component: {fileID: 1785105960645062773}
   - component: {fileID: 1785105960645062768}
+  - component: {fileID: 1785105960645062773}
   - component: {fileID: 8931552112534664098}
   - component: {fileID: 4151876921494610950}
   - component: {fileID: 1275662170853410433}
@@ -34,7 +34,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785105960645062729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.12, y: -0.51, z: 0}
+  m_LocalPosition: {x: 2.12, y: 0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2150700850221063732}
@@ -132,32 +132,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &1785105960645062773
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785105960645062729}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.02192974, y: -0.0008111}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3466666, y: 2.56}
-    newSize: {x: 1.5644444, y: 1.7066667}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0936656, y: 1.651654}
-  m_EdgeRadius: 0
 --- !u!70 &1785105960645062768
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -171,9 +145,35 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005097018, y: -1.1187866}
-  m_Size: {x: 2.1874344, y: 0.21948555}
-  m_Direction: 1
+  m_Offset: {x: 0.00088858604, y: 0.09370458}
+  m_Size: {x: 1.1358004, y: 1.9958961}
+  m_Direction: 0
+--- !u!61 &1785105960645062773
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785105960645062729}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0012667179, y: -1.1737142}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.3466666, y: 2.56}
+    newSize: {x: 1.5644444, y: 1.7066667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2881675, y: 0.16528654}
+  m_EdgeRadius: 0
 --- !u!114 &8931552112534664098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
   jugadorController: {fileID: 8931552112534664098}
   bala: {fileID: 4136755578685732396, guid: d90bc8ab2f539aa4c817edd2e638f793, type: 3}
   PuntodeDisparo: {fileID: 2150700850221063732}
+  EstadoDisparo: 
 --- !u!114 &740505150214025733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +236,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   salto: 7
-  velocidad: 5
+  velocidad: 10
+  MovimientoHorizontal: 0
 --- !u!114 &8197263147633011924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0605b1d87a99d48b5c20d7729d269e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jugadorController: {fileID: 0}
 --- !u!1 &3426538311133275400
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,9 +274,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3426538311133275400}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.101, y: 0.522, z: -0.69011515}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.45, y: 0.7, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1785105960645062772}
   m_RootOrder: 0

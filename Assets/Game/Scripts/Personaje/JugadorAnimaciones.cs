@@ -6,7 +6,9 @@ public class JugadorAnimaciones : MonoBehaviour
 {
     [SerializeField] JugadorController jugadorController;
     private Animator Animator;
-
+   
+  
+ 
     void Start()
     {
         this.jugadorController = GetComponent<JugadorController>();
@@ -22,12 +24,12 @@ public class JugadorAnimaciones : MonoBehaviour
     
     public void Animacion()
     {   
-       //Animator.SetBool("Muerte", Muerte.MuertePersonaje);
-       //Animator.SetFloat("Velocidad", Mathf.Abs(mov.Direccion.x));
-       //Animator.SetBool("Suelo", mov.Suelo());
-       //Animator.SetBool("Disparar", Disparar.DisparoEstado);
+       Animator.SetBool("Muerte", Muerte.MuertePersonaje);
+       Animator.SetFloat("Velocidad",Mathf.Abs(GameManager.gameManager.jugadorManager.jugadorController.movimiento.MovimientoHorizontal));
+       Animator.SetBool("Suelo", GameManager.gameManager.jugadorManager.jugadorController.movimiento.Suelo());
+       //Animator.SetTrigger(InputManager.InputManagerInstanciado.Atacar);
+        // Animator.SetBool("Disparar", GameManager.gameManager.jugadorManager.jugadorController.atacar.EstadoDisparo);
+
     }
-
-
-
+    
 }

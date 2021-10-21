@@ -8,8 +8,9 @@ public class HUD : MonoBehaviour
 
     public GameManager gameManager;
     public TextMeshProUGUI monedas;
+    public TextMeshProUGUI Altura;
 
-   
+
     void Update()
     {
         monedas.text = gameManager.MonedasTotales.ToString();

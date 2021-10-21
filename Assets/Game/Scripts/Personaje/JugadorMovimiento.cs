@@ -10,8 +10,8 @@ public class JugadorMovimiento : MonoBehaviour
     [SerializeField, Range(0, 120)]  float velocidad;
     private Rigidbody2D rgb2d;
     private BoxCollider2D boxCollider;
-    float MovimientoHorizontal;
-    
+    public float MovimientoHorizontal;
+
 
     void Start()
     {
@@ -29,27 +29,28 @@ public class JugadorMovimiento : MonoBehaviour
     }
 
 
+    
     public void Saltar()
     {
         if (Suelo() == true)
         {
-            rgb2d.velocity = new Vector2(rgb2d.velocity.x, salto);
+          rgb2d.AddForce(new Vector2(0, salto), ForceMode2D.Impulse);
         }
+
     }
 
-
-    void Orientacion()
+    public void Orientacion()
     {
         if (rgb2d.velocity.x > 0)
         {
-            rgb2d.transform.localScale = new Vector3(1, 1, 1);
+            rgb2d.transform.eulerAngles = new Vector3(0, 0, 0);
 
         }
         else if (rgb2d.velocity.x < 0)
         {
-            rgb2d.transform.localScale = new Vector3(-1, 1, 1);
+            rgb2d.transform.eulerAngles = new Vector3(0, 180, 0);
         }
-
+        
     }
 
 
@@ -59,7 +60,7 @@ public class JugadorMovimiento : MonoBehaviour
                                new Vector2(boxCollider.bounds.size.x,boxCollider.bounds.size.y)
                                ,0f, Vector2.down, 0.2f, capaSuelo);
 
-        return raycast.collider != null;
+        return raycast;
     }
 
    
