@@ -15,9 +15,4 @@ public class MenuController : MonoBehaviour
         this.Opciones = GetComponent<MenuOpciones>();
     }
 
-    
-    void Update()
-    {
-        
-    }
 }

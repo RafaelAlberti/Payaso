@@ -466,9 +466,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697fcaf8337232e449d74286442be93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jugadorController: {fileID: 0}
   Jugador: {fileID: 1785105960645062729, guid: 7d55f434357473843a5d9ed2c5bf084c, type: 3}
   spawn: {fileID: 637361508}
-  jugadorController: {fileID: 0}
 --- !u!4 &91466668
 Transform:
   m_ObjectHideFlags: 0
@@ -103361,7 +103361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b7eb0a4fb618d1a47a30092443476d91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81b5cdbf8bd132f4188970d024108fc2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -104394,6 +104394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b08c7ad6d0683444a9e1ede0c52f718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Presionar: 0
 --- !u!4 &780968721
 Transform:
   m_ObjectHideFlags: 0
