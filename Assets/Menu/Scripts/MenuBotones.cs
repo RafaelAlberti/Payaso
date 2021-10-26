@@ -25,11 +25,6 @@ public class MenuBotones : MonoBehaviour
 
     
 
-    public void Pausa()
-    {
-
-    }
-
     public void Volver()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

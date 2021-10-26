@@ -5,14 +5,19 @@ using TMPro;
 
 public class HUD : MonoBehaviour
 {
-
-    public GameManager gameManager;
+    [SerializeField] UIcontroller UIcontroller;
     public TextMeshProUGUI monedas;
-    public TextMeshProUGUI Altura;
+    
 
 
     void Update()
     {
-        monedas.text = gameManager.MonedasTotales.ToString();
+        MostrarMonedas();
     }
+
+    private void MostrarMonedas()
+    {
+        monedas.text = GameManager.gameManager.MonedasTotalesPropiedad.ToString();
+    }
+
 }

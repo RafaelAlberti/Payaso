@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
 
     public static InputManager InputManagerInstanciado;
     PlayerInput PlayerInput;
+    public bool Presionar;
 
     void Awake()
     {       
@@ -31,7 +32,8 @@ public class InputManager : MonoBehaviour
 
     public void OnAtacar(InputValue Valor)
     {
-        GameManager.gameManager.jugadorManager.jugadorController.atacar.Disparo();
+        Presionar = Valor.isPressed;
+        GameManager.gameManager.jugadorManager.jugadorController.atacar.Disparo(Presionar);
     }
 
 
@@ -44,6 +46,11 @@ public class InputManager : MonoBehaviour
     public void OnSaltar(InputValue Valor)
     {
        GameManager.gameManager.jugadorManager.jugadorController.movimiento.Saltar();
+    }
+
+    public void OnPausa(InputValue Valor)
+    {
+        GameManager.gameManager.UIManager.UIcontroller.MenuPausa.Pausar();
     }
 
 
