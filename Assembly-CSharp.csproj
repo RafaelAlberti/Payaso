@@ -54,10 +54,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Game\Scripts\Enemigos\Estrella.cs" />
+    <Compile Include="Assets\Game\Scripts\Enemigos\EnemigoAtaque.cs" />
+    <Compile Include="Assets\Game\Scripts\UI\UIcontroller.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\JugadorAtacar.cs" />
     <Compile Include="Assets\Game\Managers\JugadorManager.cs" />
     <Compile Include="Assets\Game\Scripts\Enemigos\Jefe.cs" />
     <Compile Include="Assets\Game\Scripts\Enemigos\EnemigoController.cs" />
+    <Compile Include="Assets\Game\Scripts\UI\Vover.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\JugadorController.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\JugadorMuere.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\JugadorMovimiento.cs" />
@@ -71,6 +74,7 @@
     <Compile Include="Assets\Game\Scripts\Personaje\Vida.cs" />
     <Compile Include="Assets\Game\Scripts\Enemigos\EnemigoDisparo.cs" />
     <Compile Include="Assets\Game\Scripts\Objetos\Moneda.cs" />
+    <Compile Include="Assets\Game\Scripts\Personaje\Muerte.cs" />
     <Compile Include="Assets\Game\Managers\EnemigoManager.cs" />
     <Compile Include="Assets\Menu\Scripts\MenuOpciones.cs" />
     <Compile Include="Assets\Menu\Scripts\MenuBotones.cs" />
@@ -81,11 +85,11 @@
     <Compile Include="Assets\Menu\Scripts\MenuSonido.cs" />
     <Compile Include="Assets\Game\Scripts\Enemigos\EnemigoSonidos.cs" />
     <Compile Include="Assets\Game\Scripts\Personaje\JugadorAnimaciones.cs" />
+    <Compile Include="Assets\Game\Managers\IUManager.cs" />
     <Compile Include="Assets\Game\Scripts\Enemigos\EnemigoAnimaciones.cs" />
+    <Compile Include="Assets\Game\Scripts\UI\Pausa.cs" />
     <Compile Include="Assets\Game\Managers\InputManager.cs" />
     <Compile Include="Assets\Menu\Scripts\MenuController.cs" />
-    <Compile Include="Assets\Game\Scripts\UI\Pausa.cs" />
-    <Compile Include="Assets\Game\Scripts\UI\UIcontroller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Menu\TextMesh Pro\Shaders\TMPro.cginc" />
