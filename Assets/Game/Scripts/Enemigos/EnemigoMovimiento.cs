@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class EnemigoMovimiento : MonoBehaviour
 {
-    [SerializeField]EnemigoController enemigoController;
-    [SerializeField] private Rigidbody2D rgb2d;
-
-
+    // Start is called before the first frame update
     void Start()
     {
-        this.rgb2d = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame

@@ -26,5 +26,9 @@ public class MenuManager : MonoBehaviour
         this.menuController = GetComponent<MenuController>();
     }
 
-  
+    
+    void Update()
+    {
+        
+    }
 }

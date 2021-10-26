@@ -8,7 +8,6 @@ public class JugadorController : MonoBehaviour
     public JugadorAtacar atacar;
     public JugadorMovimiento movimiento;
     public JugadorPowerUps powerUps;
-    public JugadorMuere morir;
 
     void Start()
     {
@@ -16,7 +15,6 @@ public class JugadorController : MonoBehaviour
        this.atacar = GetComponent<JugadorAtacar>();
        this.movimiento = GetComponent<JugadorMovimiento>();
        this.powerUps = GetComponent<JugadorPowerUps>();
-       this.morir = GetComponent<JugadorMuere>();
     }
 
 

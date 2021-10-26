@@ -62,7 +62,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Teclado AD",
+                    "name": "Teclado WASD",
                     "id": "019ac108-b4c5-496c-919e-7470934ea8e2",
                     "path": "2DVector",
                     "interactions": "",
@@ -199,7 +199,7 @@
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
                     "action": "Pausa",
                     "isComposite": false,
                     "isPartOfComposite": false

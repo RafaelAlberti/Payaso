@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 1275662170853410433}
   - component: {fileID: 740505150214025733}
   - component: {fileID: 8197263147633011924}
-  - component: {fileID: -691661905466822023}
   m_Layer: 0
   m_Name: Payaso
   m_TagString: Player
@@ -146,8 +145,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00088858604, y: -0.098900795}
-  m_Size: {x: 1.1358004, y: 2.3811069}
+  m_Offset: {x: 0.00088858604, y: 0.09370458}
+  m_Size: {x: 1.1358004, y: 1.9958961}
   m_Direction: 0
 --- !u!61 &1785105960645062773
 BoxCollider2D:
@@ -162,7 +161,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0012667179, y: -1.1795506}
+  m_Offset: {x: -0.0012667179, y: -1.1737142}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -173,7 +172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2881675, y: 0.17695963}
+  m_Size: {x: 2.2881675, y: 0.16528654}
   m_EdgeRadius: 0
 --- !u!114 &8931552112534664098
 MonoBehaviour:
@@ -191,7 +190,6 @@ MonoBehaviour:
   atacar: {fileID: 1275662170853410433}
   movimiento: {fileID: 740505150214025733}
   powerUps: {fileID: 8197263147633011924}
-  morir: {fileID: -691661905466822023}
 --- !u!114 &4151876921494610950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +237,7 @@ MonoBehaviour:
     m_Bits: 256
   salto: 7
   velocidad: 10
-  TocandoSuelo: 0
+  MovimientoHorizontal: 0
 --- !u!114 &8197263147633011924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,22 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0605b1d87a99d48b5c20d7729d269e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugadorController: {fileID: 8931552112534664098}
---- !u!114 &-691661905466822023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785105960645062729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e72d2c9ccdd68141a0cc9e366feb854, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadorController: {fileID: 8931552112534664098}
-  Perdiste: {fileID: 0}
-  MuertePersonaje: 0
+  jugadorController: {fileID: 0}
 --- !u!1 &3426538311133275400
 GameObject:
   m_ObjectHideFlags: 0

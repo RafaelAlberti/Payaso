@@ -16,7 +16,7 @@ public class JugadorAnimaciones : MonoBehaviour
     }
 
     
-     void Update()
+    void FixedUpdate()
     {
         Animacion();
     }
@@ -24,12 +24,12 @@ public class JugadorAnimaciones : MonoBehaviour
     
     public void Animacion()
     {   
-       Animator.SetBool("Muerte", GameManager.gameManager.jugadorManager.jugadorController.morir.MuertePersonaje);
+       Animator.SetBool("Muerte", Muerte.MuertePersonaje);
        Animator.SetFloat("Velocidad",Mathf.Abs(GameManager.gameManager.jugadorManager.jugadorController.movimiento.MovimientoHorizontal));
        Animator.SetBool("Suelo", GameManager.gameManager.jugadorManager.jugadorController.movimiento.Suelo());
-       Animator.SetBool("Disparar", GameManager.gameManager.jugadorManager.jugadorController.atacar.Disparar);
-       
+       //Animator.SetTrigger(InputManager.InputManagerInstanciado.Atacar);
+        // Animator.SetBool("Disparar", GameManager.gameManager.jugadorManager.jugadorController.atacar.EstadoDisparo);
+
     }
     
-
 }

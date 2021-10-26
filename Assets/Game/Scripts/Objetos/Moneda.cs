@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Moneda : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
     public int moneda = 1;
+    [SerializeField] private GameManager gameManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
