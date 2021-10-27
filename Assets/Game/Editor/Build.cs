@@ -10,7 +10,7 @@ public class Build : MonoBehaviour
 
 	public static void BuildWindows64()
 	{
-		string buildPath = ".\\Builds\\" + version + "\\Win64\\" + gameName + ".exe";
+		string buildPath = ".\\Ejecutables\\" + version + "\\Win64\\" + gameName + ".exe";
 		BuildPipeline.BuildPlayer(
 			new string[]
 			{
@@ -28,7 +28,7 @@ public class Build : MonoBehaviour
 
 	public static void BuildWindows32()
 	{
-		string buildPath = ".\\Builds\\" + version + "\\Win32\\" + gameName + ".exe";
+		string buildPath = ".\\Ejecutables\\" + version + "\\Win32\\" + gameName + ".exe";
 		BuildPipeline.BuildPlayer(
 			new string[]
 			{
