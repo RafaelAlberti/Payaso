@@ -5,11 +5,11 @@ using UnityEngine;
 public class EnemigoMovimiento : MonoBehaviour
 {
     [SerializeField]EnemigoController enemigoController;
-    [SerializeField] private Rigidbody2D rgb2d;
-    [SerializeField, Range(1, 120)] float velocidad = 5.0f;
+    [SerializeField] public Rigidbody2D rgb2d;
+    [SerializeField, Range(1, 120)] public float velocidad = 5.0f;
     float LimiteDer;
     float LimiteIzq;
-    int Direccion = 1;
+    int Direccion = -1;
 
     void Start()
     {
@@ -22,15 +22,13 @@ public class EnemigoMovimiento : MonoBehaviour
 
     void Update()
     {
-
         Caminar();
-
-
     }
 
 
     public void Caminar()
     {
+
         rgb2d.velocity = new Vector2(velocidad * Direccion, rgb2d.velocity.y);
         Orientacion();
     }

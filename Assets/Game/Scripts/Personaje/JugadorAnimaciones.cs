@@ -24,10 +24,10 @@ public class JugadorAnimaciones : MonoBehaviour
     
     public void Animacion()
     {   
-       Animator.SetBool("Muerte", GameManager.gameManager.jugadorManager.jugadorController.morir.MuertePersonaje);
-       Animator.SetFloat("Velocidad",Mathf.Abs(GameManager.gameManager.jugadorManager.jugadorController.movimiento.MovimientoHorizontal));
-       Animator.SetBool("Suelo", GameManager.gameManager.jugadorManager.jugadorController.movimiento.Suelo());
-       Animator.SetBool("Disparar", GameManager.gameManager.jugadorManager.jugadorController.atacar.Disparar);
+       this.Animator.SetBool("Muerte", GameManager.gameManager.jugadorManager.jugadorController.morir.MuertePersonaje);
+       this.Animator.SetFloat("Velocidad",Mathf.Abs(GameManager.gameManager.jugadorManager.jugadorController.movimiento.MovimientoHorizontal));
+       this.Animator.SetBool("Suelo", GameManager.gameManager.jugadorManager.jugadorController.movimiento.Suelo());
+       this.Animator.SetBool("Disparar", GameManager.gameManager.jugadorManager.jugadorController.atacar.Disparar);
        
     }
     

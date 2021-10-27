@@ -66,10 +66,10 @@ public class @Payaso : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""81ffd008-c3a9-4686-b824-25867e7b3e8b"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Joystick"",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Atacar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -235,6 +235,17 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Saltar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6148fc9-d1e6-45ab-a5fd-455453ca14b2"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Saltar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false

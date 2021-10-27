@@ -108288,6 +108288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugadorManager: {fileID: 0}
+  enemigoManager: {fileID: 0}
   UIManager: {fileID: 0}
 --- !u!4 &988146646
 Transform:
