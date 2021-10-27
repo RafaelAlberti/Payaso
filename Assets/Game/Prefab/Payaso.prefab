@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7233715205961705632, guid: 34be53a3623fad9419d19184df24763e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -220,9 +220,6 @@ MonoBehaviour:
   jugadorController: {fileID: 8931552112534664098}
   bala: {fileID: 4136755578685732396, guid: d90bc8ab2f539aa4c817edd2e638f793, type: 3}
   PuntodeDisparo: {fileID: 2150700850221063732}
-  tiempoEntreDisparos: 15
-  PresionandoDisparar: 0
-  Disparar: 0
 --- !u!114 &740505150214025733
 MonoBehaviour:
   m_ObjectHideFlags: 0

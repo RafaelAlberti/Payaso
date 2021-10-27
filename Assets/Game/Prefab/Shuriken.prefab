@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4461632169212959183, guid: 73f111cf84303844baae494b4d402775, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +99,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 4806342e2280f734b858d1111ca0872f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -115,7 +115,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -139,9 +139,9 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 2
 --- !u!114 &3050081662112084750
 MonoBehaviour:
   m_ObjectHideFlags: 0
