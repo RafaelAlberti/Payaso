@@ -220,7 +220,7 @@ MonoBehaviour:
   jugadorController: {fileID: 8931552112534664098}
   bala: {fileID: 4136755578685732396, guid: d90bc8ab2f539aa4c817edd2e638f793, type: 3}
   PuntodeDisparo: {fileID: 2150700850221063732}
-  tiempoEntreDisparos: 1
+  tiempoEntreDisparos: 15
   PresionandoDisparar: 0
   Disparar: 0
 --- !u!114 &740505150214025733

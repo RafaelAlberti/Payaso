@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Estrella : MonoBehaviour
+public class Shuriken : MonoBehaviour
 {
     private Rigidbody2D rb2d;
-    [SerializeField] private float velocidad;
+    [SerializeField] private float velocidad = 6.0f;
 
     void Start()
     {
@@ -15,17 +15,16 @@ public class Estrella : MonoBehaviour
 
     void Update()
     {
-        MovimientoEstrella();
-        DestruccionEstrella();
+        MovimientoShuriken();
+        DestruccionShuriken();
     }
 
-    private void MovimientoEstrella()
+    private void MovimientoShuriken()
     {
-        rb2d.velocity = transform.right * velocidad;
-
+       rb2d.velocity = transform.right * velocidad;
     }
 
-    private void DestruccionEstrella()
+    private void DestruccionShuriken()
     {
         Destroy(this.gameObject, 1f);
     }
