@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemigoSonidos : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] EnemigoController enemigoController;
     void Start()
     {
-        
+        this.enemigoController = GetComponent<EnemigoController>();
     }
 
     // Update is called once per frame
