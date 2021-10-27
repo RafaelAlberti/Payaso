@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,8 @@ public class JugadorAtacar : MonoBehaviour
     [SerializeField] public JugadorController jugadorController;
     [SerializeField] private GameObject bala;
     [SerializeField] Transform PuntodeDisparo;
-    [SerializeField] float tiempoEntreDisparos = 0f;
-    public bool PresionandoDisparar = false;
-    public bool Disparar = false;
-
+    [NonSerialized]public bool Disparar = false;
+    private bool PresionandoDisparar = false;
 
 
     void Start()
@@ -21,12 +20,15 @@ public class JugadorAtacar : MonoBehaviour
 
     public void Disparo(bool var)
     {
-        StartCoroutine(Atacando());
+        Disparar = true;
         PresionandoDisparar = var;
+
         if (EstadoDisparo() == true && PresionandoDisparar == true && Disparar == true)
         {
             Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
+            Invoke("Controlador", 0.25f);
         }
+        
     }
 
     public bool EstadoDisparo()
@@ -47,14 +49,10 @@ public class JugadorAtacar : MonoBehaviour
     }
 
 
-    private IEnumerator Atacando()
+  
+    void Controlador()
     {
-        if (!Disparar)
-        {
-            Disparar = true;
-            yield return new WaitForSeconds(tiempoEntreDisparos);
-            Disparar = false;
-        }
+        Disparar = false;
     }
 
 }

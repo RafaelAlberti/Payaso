@@ -20,16 +20,10 @@ public class EnemigoMovimiento : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        Caminar();
-    }
-
-
     public void Caminar()
     {
 
-        rgb2d.velocity = new Vector2(velocidad * Direccion, rgb2d.velocity.y);
+       rgb2d.velocity = new Vector2(velocidad * Direccion, rgb2d.velocity.y);
         Orientacion();
     }
 
@@ -46,6 +40,6 @@ public class EnemigoMovimiento : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
-
+   
 
 }
