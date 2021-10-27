@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 8572400486520580574}
   - component: {fileID: -7986914330810927264}
   - component: {fileID: 4999719469250070503}
+  - component: {fileID: 5535269842703952925}
   - component: {fileID: 5785466820295744811}
   - component: {fileID: 8785745033718951144}
   - component: {fileID: 7108481211813029611}
@@ -161,7 +162,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &4999719469250070503
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,6 +179,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.16999997, y: -0.012169123}
   m_Size: {x: 1.51, y: 2.4843383}
   m_Direction: 0
+--- !u!58 &5535269842703952925
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572400486520580575}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.37
 --- !u!114 &5785466820295744811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemigoController: {fileID: 5785466820295744811}
   rgb2d: {fileID: -7986914330810927264}
+  velocidad: 5
 --- !u!114 &1609238413322015542
 MonoBehaviour:
   m_ObjectHideFlags: 0
