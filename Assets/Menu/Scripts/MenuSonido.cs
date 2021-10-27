@@ -10,9 +10,5 @@ public class MenuSonido : MonoBehaviour
         menuController = GetComponent<MenuController>();
     }
 
-    
-    void Update()
-    {
-        
-    }
+  
 }

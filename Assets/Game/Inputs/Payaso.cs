@@ -75,7 +75,7 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""Teclado WASD"",
+                    ""name"": ""Teclado AD"",
                     ""id"": ""019ac108-b4c5-496c-919e-7470934ea8e2"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -212,7 +212,7 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Pausa"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
