@@ -220,7 +220,9 @@ MonoBehaviour:
   jugadorController: {fileID: 8931552112534664098}
   bala: {fileID: 4136755578685732396, guid: d90bc8ab2f539aa4c817edd2e638f793, type: 3}
   PuntodeDisparo: {fileID: 2150700850221063732}
-  EstadoDisparo: 
+  tiempoEntreDisparos: 1
+  PresionandoDisparar: 0
+  Disparar: 0
 --- !u!114 &740505150214025733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,9 +239,8 @@ MonoBehaviour:
   capaSuelo:
     serializedVersion: 2
     m_Bits: 256
-  salto: 7
+  salto: 10
   velocidad: 10
-  TocandoSuelo: 0
 --- !u!114 &8197263147633011924
 MonoBehaviour:
   m_ObjectHideFlags: 0
