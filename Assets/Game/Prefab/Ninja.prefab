@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3397298981407338809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6706550102504206704}
+  m_Layer: 0
+  m_Name: PuntoDeDisparo
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6706550102504206704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397298981407338809}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.14, y: 0.4, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8572400486520580568}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8572400486520580575
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +43,7 @@ GameObject:
   - component: {fileID: 8572400486520580574}
   - component: {fileID: -7986914330810927264}
   - component: {fileID: 4999719469250070503}
+  - component: {fileID: 988805640126466192}
   - component: {fileID: 5785466820295744811}
   - component: {fileID: 1629587121027598167}
   - component: {fileID: 7108481211813029611}
@@ -35,7 +66,8 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.9991236, z: -0, w: -0.041858405}
   m_LocalPosition: {x: 80.71, y: -0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6706550102504206704}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 184.798, z: 0}
@@ -146,6 +178,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.16999997, y: -0.012169123}
   m_Size: {x: 1.51, y: 2.4843383}
   m_Direction: 0
+--- !u!58 &988805640126466192
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572400486520580575}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 7.7
 --- !u!114 &5785466820295744811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +206,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98e7c6da35022241bfe20d1c419e36d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animaciones: {fileID: 8785745033718951144}
+  disparo: {fileID: 7108481211813029611}
+  movimiento: {fileID: 1629587121027598167}
+  sonidos: {fileID: 1609238413322015542}
 --- !u!114 &1629587121027598167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,8 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa24df066f1ac5444b1d05934f53818c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemigoController: {fileID: 0}
-  rgb2d: {fileID: 0}
+  enemigoController: {fileID: 5785466820295744811}
+  rgb2d: {fileID: -7986914330810927264}
+  Velocidad: 5
 --- !u!114 &7108481211813029611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,8 +237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8838b215db3c441a692282cd57d796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PuntodeDisparo: {fileID: 0}
-  Estrella: {fileID: 0}
+  enemigoController: {fileID: 5785466820295744811}
+  PuntodeDisparo: {fileID: 6706550102504206704}
+  Estrella: {fileID: 4136755578685732396, guid: d90bc8ab2f539aa4c817edd2e638f793, type: 3}
 --- !u!114 &8785745033718951144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ebead5a9fe146418ae2df6cd970999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemigoController: {fileID: 5785466820295744811}
 --- !u!114 &1609238413322015542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +265,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe76a7b241ca4c47b73fe3015c009df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemigoController: {fileID: 5785466820295744811}

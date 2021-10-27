@@ -8,8 +8,8 @@ public class JugadorAtacar : MonoBehaviour
     [SerializeField] public JugadorController jugadorController;
     [SerializeField] private GameObject bala;
     [SerializeField] Transform PuntodeDisparo;
-    [SerializeField] float tiempoEntreDisparos = 0f;
-    public bool PresionandoDisparar = false;
+    [SerializeField] float tiempoEntreDisparos = 1f;
+    private bool PresionandoDisparar = false;
     public bool Disparar = false;
 
 

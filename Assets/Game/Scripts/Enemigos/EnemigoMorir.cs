@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemigoAtaque : MonoBehaviour
+public class EnemigoMorir : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] EnemigoController enemigoController;
     void Start()
     {
         

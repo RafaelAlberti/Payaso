@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemigoDisparo : MonoBehaviour
 {
+    [SerializeField] EnemigoController enemigoController;
     [SerializeField] Transform PuntodeDisparo;
     [SerializeField] private GameObject Estrella;
     public static bool Disparo = false;

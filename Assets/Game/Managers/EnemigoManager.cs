@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class EnemigoManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    public EnemigoController enemigoController;
+    
     void Start()
     {
-        
+       this.enemigoController = GetComponent<EnemigoController>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         
