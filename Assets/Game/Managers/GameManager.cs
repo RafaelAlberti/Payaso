@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
     public JugadorManager jugadorManager;
+    public EnemigoManager enemigoManager;
     public UIManager UIManager;
     public int MonedasTotalesPropiedad { get { return monedasTotales; } }
     private int monedasTotales;
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        this.enemigoManager = GameObject.FindObjectOfType<EnemigoManager>();
         this.UIManager = GameObject.FindObjectOfType<UIManager>();
         this.jugadorManager = GameObject.Find("Jugador").GetComponent<JugadorManager>();
         this.jugadorManager.SpawnDePersonaje();
