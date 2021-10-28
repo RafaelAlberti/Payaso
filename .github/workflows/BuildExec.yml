@@ -11,7 +11,7 @@ jobs:
      PROJECT_PATH: ".\\"
      BUILD_METHOD_WIN64: "Build.BuildWindows64"
      BUILD_METHOD_WIN32: "Build.BuildWindows32"
-     gamename: "SaveTheCircus"
+     gamename:
      projectVersion:
        
     steps:
