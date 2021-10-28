@@ -9,7 +9,9 @@ public class EnemigoMovimiento : MonoBehaviour
     [SerializeField, Range(1, 120)] public float velocidad = 5.0f;
     float LimiteDer;
     float LimiteIzq;
-    int Direccion = -1;
+    public int Direccion = -1;
+    public bool Quieto;
+    public float Correr;
 
     void Start()
     {
@@ -22,9 +24,9 @@ public class EnemigoMovimiento : MonoBehaviour
 
     public void Caminar()
     {
-
-       rgb2d.velocity = new Vector2(velocidad * Direccion, rgb2d.velocity.y);
-        Orientacion();
+        Correr = rgb2d.velocity.x;
+            rgb2d.velocity = new Vector2(velocidad * Direccion, rgb2d.velocity.y);
+            Orientacion(); 
     }
 
     public void Orientacion()
@@ -41,5 +43,17 @@ public class EnemigoMovimiento : MonoBehaviour
         }
     }
    
+    bool ComprobarQuietud()
+    {
+        if (Mathf.Abs(rgb2d.velocity.x) < 0.1f)
+        {
+            return Quieto = true;
+        }
+        else
+        {
+            return Quieto = false;
+        }
+
+    }
 
 }
