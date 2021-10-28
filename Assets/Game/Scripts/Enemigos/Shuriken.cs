@@ -21,7 +21,7 @@ public class Shuriken : MonoBehaviour
       
     }
 
-    private void MovimientoShuriken()
+    public void MovimientoShuriken()
     {
       rb2d.velocity = transform.right * velocidad;
     }

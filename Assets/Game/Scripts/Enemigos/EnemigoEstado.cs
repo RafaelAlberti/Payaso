@@ -30,7 +30,7 @@ public class EnemigoEstado : MonoBehaviour
 
                 GameManager.gameManager.enemigoManager.enemigoController.movimiento.Caminar();
                 
-                if (DistanciaDelPayaso < DistanciaAtaque)
+                if (DistanciaDelPayaso > DistanciaSegura)
                 {
                     Estado = Comportamiento.atacando;
                     GameManager.gameManager.enemigoManager.enemigoController.disparo.EstadoAtaque = true;
@@ -40,7 +40,7 @@ public class EnemigoEstado : MonoBehaviour
 
             case Comportamiento.atacando:
 
-                if(DistanciaDelPayaso > DistanciaAtaque)
+                if(DistanciaDelPayaso < DistanciaAtaque)
                 {
                     Estado = Comportamiento.corriendo;
                     GameManager.gameManager.enemigoManager.enemigoController.disparo.EstadoAtaque = false;
