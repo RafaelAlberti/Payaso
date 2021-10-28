@@ -10,12 +10,12 @@ public class Build : MonoBehaviour
 
 	public static void BuildWindows64()
 	{
-		string buildPath = ".\\Ejecutables\\" + version + "\\Win64\\" + gameName + ".exe";
+		string buildPath = ".\\Builds\\" + version + "\\Win64\\" + gameName + ".exe";
 		BuildPipeline.BuildPlayer(
 			new string[]
 			{
-			"Assets\\Menu\\Scenes\\MenuPrincipal",
-			"Assets\\Menu\\Scenes\\Opciones",
+			"Assets\\Menu\\Scenes\\MenuPrincipal.unity",
+			"Assets\\Menu\\Scenes\\Opciones.unity",
 			"Assets\\Game\\Scenes\\Nivel-1.unity",
 			"Assets\\Game\\Scenes\\Nivel-2.unity", 
 			"Assets\\Game\\Scenes\\Nivel-3.unity"
@@ -28,12 +28,12 @@ public class Build : MonoBehaviour
 
 	public static void BuildWindows32()
 	{
-		string buildPath = ".\\Ejecutables\\" + version + "\\Win32\\" + gameName + ".exe";
+		string buildPath = ".\\Builds\\" + version + "\\Win32\\" + gameName + ".exe";
 		BuildPipeline.BuildPlayer(
 			new string[]
 			{
-			"Assets\\Menu\\Scenes\\MenuPrincipal",
-			"Assets\\Menu\\Scenes\\Opciones",
+			"Assets\\Menu\\Scenes\\MenuPrincipal.unity",
+			"Assets\\Menu\\Scenes\\Opciones.unity",
 			"Assets\\Game\\Scenes\\Nivel-1.unity",
 			"Assets\\Game\\Scenes\\Nivel-2.unity",
 			"Assets\\Game\\Scenes\\Nivel-3.unity"
