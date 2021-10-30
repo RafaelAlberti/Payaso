@@ -15,7 +15,8 @@ public class MenuBotones : MonoBehaviour
 
     public void Jugar()
     {
-        SceneManager.LoadScene("Nivel-1", LoadSceneMode.Single);
+       MenuManager.menuManagerInstancia.DestruirMenu();
+       SceneManager.LoadScene("Nivel-1", LoadSceneMode.Single);
     }
 
     public void Opciones()

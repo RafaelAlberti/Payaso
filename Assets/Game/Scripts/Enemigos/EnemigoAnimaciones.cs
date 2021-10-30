@@ -20,8 +20,7 @@ public class EnemigoAnimaciones : MonoBehaviour
 
     public void Animaciones()
     {
-        this.animator.SetBool("Quieto", GameManager.gameManager.enemigoManager.enemigoController.movimiento.Quieto);
-        this.animator.SetFloat("Velocidad", Mathf.Abs(GameManager.gameManager.enemigoManager.enemigoController.movimiento.Correr));
+       this.animator.SetFloat("Velocidad", Mathf.Abs(GameManager.gameManager.enemigoManager.enemigoController.movimiento.moverse));
         this.animator.SetBool("Disparar", GameManager.gameManager.enemigoManager.enemigoController.disparo.EstadoAtaque);
     }
 

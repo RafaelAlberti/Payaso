@@ -10,9 +10,10 @@ public class PasarNivel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene(nombreDelNivel);
+            GameManager.gameManager.DestruirGame();
+            SceneManager.LoadScene(nombreDelNivel,LoadSceneMode.Single);
         }
     }
 }

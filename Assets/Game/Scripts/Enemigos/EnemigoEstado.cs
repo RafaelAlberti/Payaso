@@ -38,9 +38,8 @@ public class EnemigoEstado : MonoBehaviour
         {
             case Comportamiento.corriendo:
 
-                GameManager.gameManager.enemigoManager.enemigoController.movimiento.Caminar();
+                GameManager.gameManager.enemigoManager.enemigoController.movimiento.Moverse();
                 GameManager.gameManager.enemigoManager.enemigoController.disparo.EstadoAtaque = false;
-                GameManager.gameManager.enemigoManager.enemigoController.movimiento.Quieto = false;
 
                 if (DistanciaDelPayaso < DistanciaAtaque)
                 {
@@ -57,7 +56,6 @@ public class EnemigoEstado : MonoBehaviour
                 }
 
                 GirarDireccionJugador();
-                GameManager.gameManager.enemigoManager.enemigoController.movimiento.Quieto = true;
                 GameManager.gameManager.enemigoManager.enemigoController.disparo.EstadoAtaque = true;
                 GameManager.gameManager.enemigoManager.enemigoController.disparo.Disparo();
 

@@ -26,5 +26,8 @@ public class MenuManager : MonoBehaviour
         this.menuController = GetComponent<MenuController>();
     }
 
-  
+    public void DestruirMenu()
+    {
+       Destroy(this.gameObject);
+    }
 }
