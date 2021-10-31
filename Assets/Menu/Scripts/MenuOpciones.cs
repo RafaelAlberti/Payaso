@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class MenuOpciones : MonoBehaviour
 {
-    public Slider slider;
-    public float SliderVolumen;
-    public Image ImagenMute;
+    //public Slider slider;
+    //public float SliderVolumen;
+    //public Image ImagenMute;
 
 
     [SerializeField] MenuController menuController;
     void Start()
     {
-        slider.value = PlayerPrefs.GetFloat("VolumenAudio", 0.5f);
-        menuController = GetComponent<MenuController>();
+        //slider.value = PlayerPrefs.GetFloat("VolumenAudio", 0.5f);
+        //menuController = GetComponent<MenuController>();
     }
 
     

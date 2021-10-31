@@ -8,6 +8,12 @@ public class Pausa : MonoBehaviour
     [SerializeField] UIcontroller UIcontroller;
     [SerializeField] private GameObject MenuPausa;
     [SerializeField] private GameObject Hud;
+    [SerializeField] private string NombreNivel;
+
+
+    private void Start()
+    {
+    }
 
 
     public void Pausar()
@@ -25,7 +31,8 @@ public class Pausa : MonoBehaviour
     public void Reiniciar()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.gameManager.Nivel();
     }
 
     public void Opciones()
@@ -33,6 +40,7 @@ public class Pausa : MonoBehaviour
         Time.timeScale = 1f;
         Hud.SetActive(false);
         SceneManager.LoadScene("Opciones", LoadSceneMode.Additive);
+        GameManager.gameManager.Nivel();
     }
 
     public void Salir()
@@ -40,5 +48,10 @@ public class Pausa : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
     }
+
+
+
+   
+
 
 }

@@ -16,7 +16,7 @@ public class JugadorMuere : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Muerte") && MuertePersonaje == false)
+        if (collision.CompareTag("Muerte"))
         {
             QuitarVida();
         }
@@ -24,7 +24,7 @@ public class JugadorMuere : MonoBehaviour
 
     private void QuitarVida()
     {
-        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        Destroy(GameManager.gameManager.jugadorManager.InstanciaJugador);
         GameManager.gameManager.jugadorManager.SpawnDePersonaje();
     }
 
