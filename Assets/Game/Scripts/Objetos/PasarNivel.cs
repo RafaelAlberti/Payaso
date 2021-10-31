@@ -12,7 +12,7 @@ public class PasarNivel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameManager.gameManager.DestruirGame();
+            GameManager.gameManager.Nivel();
             SceneManager.LoadScene(nombreDelNivel,LoadSceneMode.Single);
         }
     }

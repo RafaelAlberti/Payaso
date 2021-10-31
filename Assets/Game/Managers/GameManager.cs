@@ -31,24 +31,13 @@ public class GameManager : MonoBehaviour
    void Start()
    {
         CargarManager();
-        SpawnDePersonaje();
+        jugadorManager.SpawnDePersonaje();
         
    }
 
     private void Update()
     {
     }
-
-    public void SpawnDePersonaje()
-    {
-        jugadorManager.jugadorController = null;
-        CinemachineVirtualCamera Camara = GameObject.Find("CamaraCinematica").GetComponent<CinemachineVirtualCamera>();
-        jugadorManager.InstanciaJugador = Instantiate(jugadorManager.Jugador, jugadorManager.spawn.position, Quaternion.identity);
-        jugadorManager.InstanciaJugador.transform.parent = GameObject.Find("Jugador").transform;
-        jugadorManager.jugadorController = jugadorManager.InstanciaJugador.GetComponent<JugadorController>();
-        Camara.m_Follow = jugadorManager.InstanciaJugador.transform;
-    }
-
 
 
     public void SumarMonedas(int monedasSumar)
@@ -65,9 +54,10 @@ public class GameManager : MonoBehaviour
         this.jugadorManager = GameObject.Find("Jugador").GetComponent<JugadorManager>();
     }
 
-    public void DestruirGame()
+    public void Nivel()
     {
-        Destroy(this.gameObject);
+        Invoke("CargarManager", 1f);
+        Invoke("jugadorManager.SpawnDePersonaje", 1f); Destroy(this.gameObject);
     }
  
 }

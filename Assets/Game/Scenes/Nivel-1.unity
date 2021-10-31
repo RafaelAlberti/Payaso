@@ -107192,8 +107192,7 @@ PrefabInstance:
       value: 'Ninja '
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1776581588990061373, guid: 05b1ec19fef59eb479e690a36dcfd12d, type: 3}
-    - {fileID: 5785466820295744811, guid: 05b1ec19fef59eb479e690a36dcfd12d, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 05b1ec19fef59eb479e690a36dcfd12d, type: 3}
 --- !u!4 &907153395 stripped
 Transform:
@@ -112415,11 +112414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4689967224473065260, guid: cd650a7b533c2594db822a06285607cb, type: 3}
       propertyPath: m_XDamping
-      value: 0.3
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 4689967224473065260, guid: cd650a7b533c2594db822a06285607cb, type: 3}
       propertyPath: m_YDamping
-      value: 0.3
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 4689967224473065260, guid: cd650a7b533c2594db822a06285607cb, type: 3}
       propertyPath: m_ZDamping

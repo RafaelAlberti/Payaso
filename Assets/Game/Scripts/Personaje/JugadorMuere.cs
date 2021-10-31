@@ -25,7 +25,7 @@ public class JugadorMuere : MonoBehaviour
     private void QuitarVida()
     {
         Destroy(GameManager.gameManager.jugadorManager.InstanciaJugador);
-        GameManager.gameManager.SpawnDePersonaje();
+        GameManager.gameManager.jugadorManager.SpawnDePersonaje();
     }
 
 

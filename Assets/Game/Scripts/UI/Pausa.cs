@@ -32,7 +32,7 @@ public class Pausa : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        GameManager.gameManager.DestruirGame();
+        GameManager.gameManager.Nivel();
     }
 
     public void Opciones()
@@ -40,7 +40,7 @@ public class Pausa : MonoBehaviour
         Time.timeScale = 1f;
         Hud.SetActive(false);
         SceneManager.LoadScene("Opciones", LoadSceneMode.Additive);
-        GameManager.gameManager.DestruirGame();
+        GameManager.gameManager.Nivel();
     }
 
     public void Salir()
