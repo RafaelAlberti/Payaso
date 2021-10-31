@@ -1,3 +1,4 @@
 Confirmo que funciona de nuevo git ??
 Funciona??
 main es la rama principal
+Actualmente no funciona como se espera
