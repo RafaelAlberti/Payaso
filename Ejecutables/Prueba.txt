@@ -1,1 +1,1 @@
-Confirmo que funciona de nuevo git 
+Este documento se creo para comprobar que git este conectado con GitHub
