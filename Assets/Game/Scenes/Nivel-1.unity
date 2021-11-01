@@ -780,6 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229c9d500fccd3c4881821ff17e3453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Perdiste: {fileID: 0}
 --- !u!68 &144835784
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -915,6 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229c9d500fccd3c4881821ff17e3453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Perdiste: {fileID: 0}
 --- !u!68 &197882595
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1326,6 +1328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229c9d500fccd3c4881821ff17e3453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Perdiste: {fileID: 0}
 --- !u!68 &332015933
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1789,6 +1792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229c9d500fccd3c4881821ff17e3453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Perdiste: {fileID: 0}
 --- !u!68 &431725142
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -105364,6 +105368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229c9d500fccd3c4881821ff17e3453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Perdiste: {fileID: 0}
 --- !u!68 &681292801
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -105430,6 +105435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229c9d500fccd3c4881821ff17e3453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Perdiste: {fileID: 0}
 --- !u!68 &701917871
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -105721,33 +105727,36 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 331.44693, y: 37.635677}
-      - {x: -6.371004, y: 36.436928}
+    - - {x: 331.44693, y: 42.05331}
+      - {x: -7.0020924, y: 41.48565}
       - {x: -6.4947777, y: 4.2687445}
       - {x: -6.7265124, y: -1.8409866}
-      - {x: -6.304565, y: -15.7195}
-      - {x: 61.97381, y: -15.403066}
-      - {x: 61.6191, y: -2.52073}
-      - {x: 69.229195, y: -2.493124}
-      - {x: 69.30732, y: -17.327427}
-      - {x: 85.22676, y: -16.885471}
-      - {x: 94.83406, y: -16.855816}
-      - {x: 94.8697, y: -10.184055}
-      - {x: 101.53889, y: -10.260731}
-      - {x: 110.31038, y: -10.20503}
-      - {x: 116.61994, y: -9.936427}
-      - {x: 130.91913, y: -9.585217}
-      - {x: 131.2871, y: -2.0878348}
-      - {x: 137.49869, y: -1.8631091}
-      - {x: 138.41623, y: -9.060736}
-      - {x: 158.95709, y: -8.7968025}
-      - {x: 179.37085, y: -8.754549}
-      - {x: 188.34471, y: -8.745096}
-      - {x: 197.59818, y: -8.658296}
-      - {x: 221.19307, y: -8.859432}
-      - {x: 243.37575, y: -9.005507}
-      - {x: 269.0453, y: -9.33918}
-      - {x: 269.04123, y: -5.388876}
+      - {x: -6.747535, y: -23.250004}
+      - {x: 62.121468, y: -23.819513}
+      - {x: 65.01521, y: -23.635677}
+      - {x: 68.04794, y: -23.903383}
+      - {x: 75.62741, y: -24.009323}
+      - {x: 80.97222, y: -24.119648}
+      - {x: 88.47521, y: -23.530033}
+      - {x: 95.57234, y: -23.795692}
+      - {x: 103.13849, y: -24.063808}
+      - {x: 114.97568, y: -23.402203}
+      - {x: 124.78076, y: -23.78947}
+      - {x: 132.41925, y: -23.520866}
+      - {x: 139.33559, y: -23.317312}
+      - {x: 143.39497, y: -24.088722}
+      - {x: 148.57297, y: -23.863997}
+      - {x: 157.46397, y: -23.974087}
+      - {x: 169.14543, y: -24.00547}
+      - {x: 187.93495, y: -23.81556}
+      - {x: 201.48619, y: -24.396732}
+      - {x: 212.21622, y: -23.571648}
+      - {x: 233.30095, y: -24.0681}
+      - {x: 246.91951, y: -24.361834}
+      - {x: 259.2494, y: -23.636032}
+      - {x: 275.2469, y: -23.809563}
+      - {x: 295.76712, y: -23.993652}
+      - {x: 331.5716, y: -22.885223}
       - {x: 331.88794, y: -5.448459}
 --- !u!1001 &762334521
 PrefabInstance:
@@ -106388,6 +106397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229c9d500fccd3c4881821ff17e3453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Perdiste: {fileID: 0}
 --- !u!68 &848098348
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -106748,6 +106758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229c9d500fccd3c4881821ff17e3453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Perdiste: {fileID: 0}
 --- !u!68 &881046576
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -107695,6 +107706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229c9d500fccd3c4881821ff17e3453a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Perdiste: {fileID: 0}
 --- !u!68 &964863107
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -108791,7 +108803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101163381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 285.1, y: 5.07, z: 0}
+  m_LocalPosition: {x: 291.89, y: 5.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 897923022}

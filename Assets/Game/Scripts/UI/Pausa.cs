@@ -41,6 +41,8 @@ public class Pausa : MonoBehaviour
         Hud.SetActive(false);
         SceneManager.LoadScene("Opciones", LoadSceneMode.Additive);
         GameManager.gameManager.Nivel();
+        GameManager.gameManager.UIManager.menuManager.DestruirMenu();
+
     }
 
     public void Salir()

@@ -15,6 +15,7 @@ TagManager:
   - Verde
   - PowerUP
   - Menu
+  - Circo
   layers:
   - Default
   - TransparentFX
