@@ -1,2 +1,13 @@
+
 Este documento se creo para comprobar que git este conectado con GitHub
 Las ramas que posee este proyecto son main, master y prueba
+
+
+Confirmo que funciona de nuevo git ??
+Funciona??
+main es la rama principal
+Actualmente no funciona como se espera
+
+Este documento se creo para comprobar que git este conectado con GitHub
+
+
