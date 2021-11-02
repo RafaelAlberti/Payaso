@@ -4,10 +4,10 @@ using UnityEngine;
 public class EnemigoMovimiento : MonoBehaviour
 {
     [SerializeField] EnemigoController enemigoController;
-    [SerializeField] public Rigidbody2D rgb2d;
-    [SerializeField] public CircleCollider2D area;
+    [SerializeField] Rigidbody2D rgb2d;
+    [SerializeField] CircleCollider2D area;
     [SerializeField, Range(1, 120)] public float velocidad = 5.0f;
-    [NonSerialized] public float moverse;
+    [NonSerialized] public float moverse = 0;
     float LimiteDer;
     float LimiteIzq;
     public int Direccion = -1;
@@ -26,10 +26,17 @@ public class EnemigoMovimiento : MonoBehaviour
 
     public void Moverse()
     {
-        rgb2d.velocity = new Vector2(velocidad * Direccion, rgb2d.velocity.y);
-        moverse = rgb2d.velocity.x;
-        Orientacion(); 
+       moverse = rgb2d.velocity.x;
+       rgb2d.velocity = new Vector2(velocidad * Direccion, rgb2d.velocity.y);
+       Orientacion();
     }
+
+    public void Quieto()
+    {
+        rgb2d.velocity = new Vector2(0,0);
+        Orientacion();
+    }
+
 
     public void Orientacion()
     {
@@ -45,5 +52,19 @@ public class EnemigoMovimiento : MonoBehaviour
         }
     }
 
+    bool Disparando()
+    {
+        bool Disparando = enemigoController.disparo.EstadoAtaque;
+        
+        if(Disparando == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
+
+    }
 }

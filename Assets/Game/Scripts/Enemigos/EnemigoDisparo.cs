@@ -9,7 +9,7 @@ public class EnemigoDisparo : MonoBehaviour
     [SerializeField] Transform PuntodeDisparo;
     [SerializeField] private float TiempoEntreDisparos;
     private float Contador;
-    public bool EstadoAtaque = false;
+    public bool EstadoAtaque = true;
     
     void Start()
     {
@@ -22,7 +22,7 @@ public class EnemigoDisparo : MonoBehaviour
         Contador += Time.deltaTime;
         if ( Contador > TiempoEntreDisparos && EstadoAtaque == true)
         {
-            GameObject Bala = Instantiate(Shuriken, PuntodeDisparo.position,PuntodeDisparo.rotation);
+            GameObject ShurikenInstancia = Instantiate(Shuriken, PuntodeDisparo.position,PuntodeDisparo.rotation);
             
             Contador = 0;
         }

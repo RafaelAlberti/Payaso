@@ -15,11 +15,16 @@ public class JugadorManager : MonoBehaviour
 
     public void SpawnDePersonaje()
     {
-        jugadorController = null;
+       // jugadorController = null;
+
         CinemachineVirtualCamera Camara = GameObject.Find("CamaraCinematica").GetComponent<CinemachineVirtualCamera>();
+
         InstanciaJugador = Instantiate(Jugador, spawn.position, Quaternion.identity);
+
         InstanciaJugador.transform.parent = GameObject.Find("Jugador").transform;
-        jugadorController =InstanciaJugador.GetComponent<JugadorController>();
+
+        jugadorController = InstanciaJugador.GetComponent<JugadorController>();
+
         Camara.m_Follow = InstanciaJugador.transform;
     }
 }

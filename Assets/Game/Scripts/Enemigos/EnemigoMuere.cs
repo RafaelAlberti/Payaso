@@ -5,14 +5,28 @@ using UnityEngine;
 public class EnemigoMuere : MonoBehaviour
 {
     [SerializeField] EnemigoController enemigoController;
-    void Start()
+   
+
+
+    public void Start()
     {
-        this.enemigoController = GetComponent<EnemigoController>();
+        enemigoController = GetComponent<EnemigoController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Bala"))
+        {
+            Muerte();
+        }
+
     }
+
+
+    public void Muerte()
+    {
+      Destroy(this.gameObject);
+    }
+
+
 }
