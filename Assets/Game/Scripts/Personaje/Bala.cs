@@ -27,8 +27,17 @@ public class Bala : MonoBehaviour
 
     private void DestruccionBala()
     {
-        Destroy(this.gameObject, 1f);
+        Destroy(this.gameObject, 1.2f);
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemigo"))
+        {
+            Destroy(this.gameObject);
+        }
+       
+    }
 
 }

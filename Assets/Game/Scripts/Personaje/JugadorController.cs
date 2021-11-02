@@ -20,4 +20,10 @@ public class JugadorController : MonoBehaviour
     }
 
 
+    public void RecibirDanio()
+    {
+        morir.QuitarVida();
+    }
+
+
 }

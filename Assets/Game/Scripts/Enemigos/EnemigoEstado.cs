@@ -6,13 +6,15 @@ public class EnemigoEstado : MonoBehaviour
 {
 
     [SerializeField] EnemigoController enemigoController;
+    [SerializeField] Transform Payaso;
     enum Comportamiento { corriendo, atacando }
     Comportamiento Estado = Comportamiento.corriendo;
 
-    float DistanciaSeguraSalida = 8f;
-    float DistanciaAtaque = 6f;
+    [SerializeField] float DistanciaSeguraSalida = 8f;
+    [SerializeField] float DistanciaAtaque = 6f;
+
     float DistanciaDelPayaso;
-    public Transform Payaso;
+
 
     private void Start()
     {
@@ -24,26 +26,25 @@ public class EnemigoEstado : MonoBehaviour
     private void Update()
     {
         Payaso = GameObject.Find("Payaso(Clone)").GetComponent<JugadorController>().transform;
-
-        DistanciaDelPayaso = Mathf.Abs(Payaso.position.x - this.transform.position.x );
-        Debug.Log(DistanciaDelPayaso);
-
+        DistanciaDelPayaso = Mathf.Abs(Payaso.position.x - this.transform.position.x);
         EstadosComportamiento();
     }
 
 
-    void EstadosComportamiento() 
+    void EstadosComportamiento()
     {
         switch (Estado)
         {
             case Comportamiento.corriendo:
 
-                GameManager.gameManager.enemigoManager.enemigoController.movimiento.Moverse();
-                GameManager.gameManager.enemigoManager.enemigoController.disparo.EstadoAtaque = false;
+                enemigoController.movimiento.Moverse();
+                enemigoController.disparo.EstadoAtaque = false;
 
                 if (DistanciaDelPayaso < DistanciaAtaque)
                 {
                     Estado = Comportamiento.atacando;
+                    enemigoController.movimiento.Quieto();
+                    GirarDireccionJugador();
                 }
 
                 break;
@@ -55,10 +56,9 @@ public class EnemigoEstado : MonoBehaviour
                     Estado = Comportamiento.corriendo;
                 }
 
+                enemigoController.disparo.EstadoAtaque = true;
+                enemigoController.disparo.Disparo();
                 GirarDireccionJugador();
-                GameManager.gameManager.enemigoManager.enemigoController.disparo.EstadoAtaque = true;
-                GameManager.gameManager.enemigoManager.enemigoController.disparo.Disparo();
-
                 break;
         }
 
@@ -72,11 +72,11 @@ public class EnemigoEstado : MonoBehaviour
     {
         if (Payaso.position.x > transform.position.x)
         {
-            GameManager.gameManager.enemigoManager.enemigoController.movimiento.Direccion = -1;
+          enemigoController.movimiento.Direccion = -1;
         }
         if (Payaso.position.x < transform.position.x)
         { 
-            GameManager.gameManager.enemigoManager.enemigoController.movimiento.Direccion = 11; 
+          enemigoController.movimiento.Direccion = 11; 
         }
 
     }

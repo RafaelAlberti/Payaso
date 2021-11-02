@@ -51,9 +51,4 @@ public class Pausa : MonoBehaviour
         SceneManager.LoadScene("MenuPrincipal", LoadSceneMode.Single);
     }
 
-
-
-   
-
-
 }

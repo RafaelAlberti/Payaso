@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4136755578685732398}
   - component: {fileID: 4136755578685732397}
   - component: {fileID: 4136755578685732432}
+  - component: {fileID: 3640701615736422632}
   m_Layer: 0
   m_Name: agua
-  m_TagString: Untagged
+  m_TagString: Bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,3 +119,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 6
+--- !u!70 &3640701615736422632
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4136755578685732396}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.08443251, y: 0.08202084}
+  m_Size: {x: 0.31476513, y: 0.2809973}
+  m_Direction: 1

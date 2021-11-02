@@ -9,6 +9,7 @@ public class EnemigoController : MonoBehaviour
     public EnemigoMovimiento movimiento;
     public EnemigoMuere muere;
     public EnemigoSonidos sonidos;
+    public EnemigoEstado estado;
     void Start()
     {
         this.animaciones = GetComponent<EnemigoAnimaciones>();
@@ -16,6 +17,7 @@ public class EnemigoController : MonoBehaviour
         this.movimiento = GetComponent<EnemigoMovimiento>();
         this.muere = GetComponent<EnemigoMuere>();
         this.sonidos = GetComponent<EnemigoSonidos>();
+        this.estado = GetComponent<EnemigoEstado>();
     }
 
     
