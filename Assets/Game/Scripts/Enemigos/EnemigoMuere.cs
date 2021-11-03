@@ -15,7 +15,12 @@ public class EnemigoMuere : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Bala"))
+        if (collision.CompareTag("Bala"))
+        {
+            Muerte();
+        }
+
+        if (collision.CompareTag("Player"))
         {
             Muerte();
         }

@@ -16,25 +16,24 @@ public class JugadorMuere : MonoBehaviour
         VidaActual = VidaMaxima;
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Estrella"))
+        if (collision.CompareTag("Muerte"))
         {
             QuitarVida();
         }
-
     }
 
     public void QuitarVida()
     {
-        //Destroy(GameManager.gameManager.jugadorManager.InstanciaJugador);
-        //ameManager.gameManager.jugadorManager.SpawnDePersonaje();
+        Destroy(GameManager.gameManager.jugadorManager.InstanciaJugador);
+        GameManager.gameManager.jugadorManager.SpawnDePersonaje();
         VidaActual -= 1;
         Debug.Log(VidaActual);
         if (VidaActual <= 0)
         {
             Debug.Log("Me mataste Rancio");
+            MuerteFinal();
         }
     }
 
