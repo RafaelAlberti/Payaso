@@ -11,27 +11,24 @@ public class JugadorPowerUps : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        
-    }
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        switch (tag)
+        if (collision.CompareTag("Rojo"))
         {
-            case "Rojo":
-                GloboRojo();
-                 break;
+            GloboRojo();
+            Destroy(collision.gameObject);
+        }
 
-            case "Azul":
-                GloboAzul();
-                break;
+        if (collision.CompareTag("Verde"))
+        {
+            GloboVerde();
+            Destroy(collision.gameObject);
+        }
 
-            case "Verde":
-                GloboVerde();
-                break;
+        if (collision.CompareTag("Azul"))
+        {
+            GloboAzul();
+            Destroy(collision.gameObject);
         }
 
     }
