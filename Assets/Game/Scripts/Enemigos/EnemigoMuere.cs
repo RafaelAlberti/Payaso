@@ -19,12 +19,6 @@ public class EnemigoMuere : MonoBehaviour
         {
             Muerte();
         }
-
-        if (collision.CompareTag("Player"))
-        {
-            Muerte();
-        }
-
     }
 
 

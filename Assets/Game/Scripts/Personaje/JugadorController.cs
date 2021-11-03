@@ -12,6 +12,7 @@ public class JugadorController : MonoBehaviour
 
     void Start()
     {
+
        this.animaciones = GetComponent<JugadorAnimaciones>();
        this.atacar = GetComponent<JugadorAtacar>();
        this.movimiento = GetComponent<JugadorMovimiento>();
@@ -22,7 +23,16 @@ public class JugadorController : MonoBehaviour
 
     public void RecibirDanio()
     {
-        morir.QuitarVida();
+        GameManager.gameManager.UIManager.UIcontroller.hud.HacerDanio();
+        GameManager.gameManager.UIManager.UIcontroller.hud.QuitarVidas();
+        Destroy(GameManager.gameManager.jugadorManager.InstanciaJugador);
+        GameManager.gameManager.jugadorManager.SpawnDePersonaje();
+    }
+
+    public void RecibirVida()
+    {
+        GameManager.gameManager.UIManager.UIcontroller.hud.Curar();
+        GameManager.gameManager.UIManager.UIcontroller.hud.AgregarVidas();
     }
 
 

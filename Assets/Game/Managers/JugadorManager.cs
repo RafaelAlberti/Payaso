@@ -6,16 +6,15 @@ using Cinemachine;
 
 
 public class JugadorManager : MonoBehaviour
-{  
+{   
+    public JugadorController jugadorController;
     [SerializeField] public GameObject Jugador;
     [SerializeField] public Transform spawn;
-    public JugadorController jugadorController;
     [NonSerialized]  public GameObject InstanciaJugador;
 
 
     public void SpawnDePersonaje()
     {
-       // jugadorController = null;
 
         CinemachineVirtualCamera Camara = GameObject.Find("CamaraCinematica").GetComponent<CinemachineVirtualCamera>();
 
@@ -26,5 +25,6 @@ public class JugadorManager : MonoBehaviour
         jugadorController = InstanciaJugador.GetComponent<JugadorController>();
 
         Camara.m_Follow = InstanciaJugador.transform;
+
     }
 }
