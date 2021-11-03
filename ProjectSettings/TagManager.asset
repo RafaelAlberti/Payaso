@@ -16,6 +16,8 @@ TagManager:
   - PowerUP
   - Menu
   - Circo
+  - Bala
+  - Perdiste
   layers:
   - Default
   - TransparentFX

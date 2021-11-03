@@ -36,7 +36,7 @@ public class JugadorPowerUps : MonoBehaviour
 
     public void GloboRojo()
     {
-        Debug.Log("Hola; Yo soy el globo rojo con el nuevo sistema");
+      jugadorController.RecibirVida();
     }
 
 
@@ -48,7 +48,7 @@ public class JugadorPowerUps : MonoBehaviour
 
     public void GloboVerde()
     {
-        Debug.Log("Hola; Yo soy el globo verde con el nuevo sistema");
+        jugadorController.RecibirDanio();
     }
 
 

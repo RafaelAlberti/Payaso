@@ -8,12 +8,6 @@ public class Pausa : MonoBehaviour
     [SerializeField] UIcontroller UIcontroller;
     [SerializeField] private GameObject MenuPausa;
     [SerializeField] private GameObject Hud;
-    [SerializeField] private string NombreNivel;
-
-
-    private void Start()
-    {
-    }
 
 
     public void Pausar()
@@ -32,7 +26,7 @@ public class Pausa : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        GameManager.gameManager.Nivel();
+        GameManager.gameManager.Nivel(); 
     }
 
     public void Opciones()

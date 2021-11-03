@@ -5,43 +5,39 @@ using UnityEngine;
 public class JugadorMuere : MonoBehaviour
 {
     [SerializeField] JugadorController jugadorController;
-    [SerializeField] private GameObject Perdiste;
-    public bool MuertePersonaje;
-    int VidaMaxima = 3;
-    int VidaActual;
+    int Vida;
     void Start()
     {
         this.jugadorController = GetComponent<JugadorController>();
-        this.Perdiste = GameObject.Find("Perdiste");
-        VidaActual = VidaMaxima;
+        Vida = GameManager.gameManager.UIManager.UIcontroller.hud.VidaMaxima;
     }
 
+    private void Update()
+    {
+        muerte();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Muerte"))
         {
-            QuitarVida();
+            jugadorController.RecibirDanio();
         }
-    }
-
-    public void QuitarVida()
-    {
-        Destroy(GameManager.gameManager.jugadorManager.InstanciaJugador);
-        GameManager.gameManager.jugadorManager.SpawnDePersonaje();
-        VidaActual -= 1;
-        Debug.Log(VidaActual);
-        if (VidaActual <= 0)
+        if (collision.CompareTag("Enemigo"))
         {
-            Debug.Log("Me mataste Rancio");
-            MuerteFinal();
+            jugadorController.RecibirDanio();
+        }
+
+    }
+
+    void muerte()
+    {
+        if(Vida <= 0)
+        {
+            GameManager.gameManager.UIManager.UIcontroller.hud.muerte();
+            Time.timeScale = 0;
         }
     }
 
-    void MuerteFinal()
-    {
-        //bool MuertePersonaje = true;
-        Time.timeScale = 0;
-        Perdiste.SetActive(true);
-    }
 
 }
