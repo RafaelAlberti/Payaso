@@ -10,6 +10,7 @@ public class JugadorController : MonoBehaviour
     public JugadorPowerUps powerUps;
     public JugadorMuere morir;
     public bool cinematica = false;
+    public bool cinematicaFinal = false;
 
     void Start()
     {
@@ -43,7 +44,10 @@ public class JugadorController : MonoBehaviour
         {
             cinematica = true;
         }
-
+        if (collision.CompareTag("CinematicaFinal"))
+        {
+            cinematicaFinal = true;
+        }
     }
 
   

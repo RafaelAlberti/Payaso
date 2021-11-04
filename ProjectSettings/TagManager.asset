@@ -19,9 +19,7 @@ TagManager:
   - Bala
   - Perdiste
   - CinematicaSegunda
-  - CinematicaTercera
-  - CinematicaCuarta
-  - CinematicaQuinta
+  - CinematicaFinal
   layers:
   - Default
   - TransparentFX
