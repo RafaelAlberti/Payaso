@@ -14,13 +14,13 @@ public class ControladorCinematica : MonoBehaviour
     {
         if(GameManager.gameManager.jugadorManager.jugadorController.cinematica == true)
         {
-            SegundaCinematicas();
+            Cinematicas();
             GameManager.gameManager.jugadorManager.jugadorController.cinematica = false;
         }
     }
 
 
-    public void SegundaCinematicas()
+    public void Cinematicas()
      {
         Director.Play();
      }
