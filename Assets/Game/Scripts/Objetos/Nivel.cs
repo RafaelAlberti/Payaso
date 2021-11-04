@@ -13,6 +13,7 @@ public class Nivel : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameManager.gameManager.Nivel();
+            InputManager.InputManagerInstanciado.OnDestroy();
             SceneManager.LoadScene(nombreDelNivel,LoadSceneMode.Single);
         }
     }

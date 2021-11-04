@@ -9,6 +9,7 @@ public class JugadorController : MonoBehaviour
     public JugadorMovimiento movimiento;
     public JugadorPowerUps powerUps;
     public JugadorMuere morir;
+    public bool cinematica = false;
 
     void Start()
     {
@@ -35,5 +36,16 @@ public class JugadorController : MonoBehaviour
         GameManager.gameManager.UIManager.UIcontroller.hud.AgregarVidas();
     }
 
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("CinematicaSegunda"))
+        {
+            cinematica = true;
+        }
+
+    }
+
+  
 
 }
