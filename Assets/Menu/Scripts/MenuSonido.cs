@@ -1,14 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuSonido : MonoBehaviour
 {
-    [SerializeField] MenuController menuController;
+    public Slider slider;
+    public float sliderValor;
+
     void Start()
     {
-        menuController = GetComponent<MenuController>();
+        slider.value = PlayerPrefs.GetFloat("VolumenAudio", 0.5f);
+        AudioListener.volume = slider.value;
     }
 
-  
+
+    public void Volumen(float valor)
+    {
+        sliderValor = valor;
+        PlayerPrefs.SetFloat("VolumenAudio", sliderValor);
+        AudioListener.volume = slider.value;
+    }
+
+
 }
