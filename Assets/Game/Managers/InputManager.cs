@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
 
     public static InputManager InputManagerInstanciado;
     PlayerInput PlayerInput;
-    public bool Presionar;
+    [NonSerialized]public bool Presionar;
 
     void Awake()
     {       
@@ -24,6 +24,10 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    public void OnDestroy()
+    {
+        Destroy(this.gameObject);
+    }
 
     private void Start()
     {

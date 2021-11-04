@@ -75,7 +75,7 @@ public class HUD : MonoBehaviour
 
     public void vive()
     {
-        
+        Perdiste.SetActive(false);
     }
 
 }

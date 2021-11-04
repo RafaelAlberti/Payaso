@@ -25,8 +25,9 @@ public class Pausa : MonoBehaviour
     public void Reiniciar()
     {
         Time.timeScale = 1f;
+        GameManager.gameManager.Nivel();
+        InputManager.InputManagerInstanciado.OnDestroy();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        GameManager.gameManager.Nivel(); 
     }
 
     public void Opciones()

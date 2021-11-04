@@ -33,11 +33,6 @@ public class GameManager : MonoBehaviour
         
    }
 
-    private void Update()
-    {
-    }
-
-
     public void SumarMonedas(int monedasSumar)
     {
       this.monedasTotales += monedasSumar;
@@ -49,12 +44,14 @@ public class GameManager : MonoBehaviour
     {
         this.UIManager = GameObject.FindObjectOfType<UIManager>();
         this.jugadorManager = GameObject.Find("Jugador").GetComponent<JugadorManager>();
+        Time.timeScale = 1f;
     }
 
     public void Nivel()
     {
         Invoke("CargarManager", 1f);
-        Invoke("jugadorManager.SpawnDePersonaje", 1f); Destroy(this.gameObject);
+        Invoke("jugadorManager.SpawnDePersonaje", 1f);
+        Destroy(this.gameObject);
     }
  
 }
