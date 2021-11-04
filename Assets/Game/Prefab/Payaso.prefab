@@ -81,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7233715205961705632, guid: 34be53a3623fad9419d19184df24763e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -192,6 +192,7 @@ MonoBehaviour:
   movimiento: {fileID: 740505150214025733}
   powerUps: {fileID: 8197263147633011924}
   morir: {fileID: -691661905466822023}
+  cinematica: 0
 --- !u!114 &4151876921494610950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,8 +265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugadorController: {fileID: 8931552112534664098}
-  Perdiste: {fileID: 0}
-  MuertePersonaje: 0
 --- !u!1 &3426538311133275400
 GameObject:
   m_ObjectHideFlags: 0
