@@ -11,6 +11,7 @@ public class Perdiste : MonoBehaviour
     {
         SceneManager.LoadScene(nombreNivel, LoadSceneMode.Single);
         GameManager.gameManager.Nivel();
+        InputManager.InputManagerInstanciado.OnDestroy();
     }
 
 

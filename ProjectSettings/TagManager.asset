@@ -18,6 +18,10 @@ TagManager:
   - Circo
   - Bala
   - Perdiste
+  - CinematicaSegunda
+  - CinematicaTercera
+  - CinematicaCuarta
+  - CinematicaQuinta
   layers:
   - Default
   - TransparentFX
