@@ -6,6 +6,7 @@ public class JugadorMuere : MonoBehaviour
 {
     [SerializeField] JugadorController jugadorController;
     int Vida;
+    bool QuitarVida;
     void Start()
     {
         this.jugadorController = GetComponent<JugadorController>();
@@ -21,11 +22,13 @@ public class JugadorMuere : MonoBehaviour
 
         if (collision.CompareTag("Muerte"))
         {
-            jugadorController.RecibirDanio();
+            danio();
+            QuitarVida = true;
         }
         if (collision.CompareTag("Enemigo"))
         {
-            jugadorController.RecibirDanio();
+            danio();
+            QuitarVida = true;
         }
 
     }
@@ -39,5 +42,13 @@ public class JugadorMuere : MonoBehaviour
         }
     }
 
+    void danio()
+    {
+        if (QuitarVida == true)
+        {
+            jugadorController.RecibirDanio();
+            QuitarVida = false;
+        }
+    }
 
 }

@@ -49,7 +49,8 @@ public class InputManager : MonoBehaviour
 
     public void OnSaltar(InputValue Valor)
     {
-       GameManager.gameManager.jugadorManager.jugadorController.movimiento.Saltar();
+        GameManager.gameManager.jugadorManager.jugadorController.sonidos.SonidoSalto();
+        GameManager.gameManager.jugadorManager.jugadorController.movimiento.Saltar();
     }
 
     public void OnPausa(InputValue Valor)

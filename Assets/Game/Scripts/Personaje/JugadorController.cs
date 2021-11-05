@@ -9,6 +9,7 @@ public class JugadorController : MonoBehaviour
     public JugadorMovimiento movimiento;
     public JugadorPowerUps powerUps;
     public JugadorMuere morir;
+    public JugadorSonidos sonidos;
     public bool cinematica = false;
     public bool cinematicaFinal = false;
 
@@ -20,6 +21,7 @@ public class JugadorController : MonoBehaviour
        this.movimiento = GetComponent<JugadorMovimiento>();
        this.powerUps = GetComponent<JugadorPowerUps>();
        this.morir = GetComponent<JugadorMuere>();
+       this.sonidos = GetComponent<JugadorSonidos>();
     }
 
 

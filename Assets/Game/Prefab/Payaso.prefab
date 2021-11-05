@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 740505150214025733}
   - component: {fileID: 8197263147633011924}
   - component: {fileID: -691661905466822023}
+  - component: {fileID: -2548733749186632199}
   m_Layer: 0
   m_Name: Payaso
   m_TagString: Player
@@ -35,7 +36,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785105960645062729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.12, y: 0.14, z: 0}
+  m_LocalPosition: {x: 2.12, y: 0.14, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2150700850221063732}
@@ -192,7 +193,9 @@ MonoBehaviour:
   movimiento: {fileID: 740505150214025733}
   powerUps: {fileID: 8197263147633011924}
   morir: {fileID: -691661905466822023}
+  sonidos: {fileID: 0}
   cinematica: 0
+  cinematicaFinal: 0
 --- !u!114 &4151876921494610950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +242,7 @@ MonoBehaviour:
     m_Bits: 256
   salto: 10
   velocidad: 10
+  TiempoPower: 0
 --- !u!114 &8197263147633011924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugadorController: {fileID: 8931552112534664098}
+  pw: 0
 --- !u!114 &-691661905466822023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +270,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugadorController: {fileID: 8931552112534664098}
+--- !u!114 &-2548733749186632199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785105960645062729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269d4f9d4b9fde94b96d695c2e72c7cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugadorController: {fileID: 8931552112534664098}
+  disparo: {fileID: 7664901831738098558, guid: 9c6b7a3367a912b45aa056da0bf23ed8, type: 3}
+  Salto: {fileID: 1617335938399982401, guid: 85cfdcdae6cd3ca4881acbee2b8e677f, type: 3}
+  globo: {fileID: 3214371375004873802, guid: 5ee814693bd289b49bbb520deda00804, type: 3}
+  moneda: {fileID: 6183459800213950450, guid: 2504f5f774569f94e8065aa42d96475d, type: 3}
+  Payaso: {fileID: 1785105960645062772}
 --- !u!1 &3426538311133275400
 GameObject:
   m_ObjectHideFlags: 0

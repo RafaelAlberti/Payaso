@@ -11,6 +11,7 @@ public class Moneda : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            GameManager.gameManager.jugadorManager.jugadorController.sonidos.SonidoMoneda();
             gameManager.SumarMonedas(moneda);
             Destroy(this.gameObject);
         }

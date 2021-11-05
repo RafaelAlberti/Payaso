@@ -6,7 +6,6 @@ public class Shuriken : MonoBehaviour
 {
     [SerializeField] private float velocidad = 6.0f;
     private Rigidbody2D rb2d;
-    int index;
 
 
     void Start()
@@ -29,6 +28,7 @@ public class Shuriken : MonoBehaviour
 
     private void DestruccionShuriken()
     {
+
       Destroy(this.gameObject, 1f);
     }
 
@@ -37,10 +37,8 @@ public class Shuriken : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            index ++;
             Destroy(this.gameObject);
-
-               GameManager.gameManager.jugadorManager.jugadorController.RecibirDanio();
+            GameManager.gameManager.jugadorManager.jugadorController.RecibirDanio();
                    
         }
     }

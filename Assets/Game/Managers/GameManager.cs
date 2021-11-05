@@ -33,10 +33,29 @@ public class GameManager : MonoBehaviour
         
    }
 
+  
+
     public void SumarMonedas(int monedasSumar)
     {
       this.monedasTotales += monedasSumar;
         
+    }
+
+
+
+    public void GuardarPartida()
+    {
+        InformacionPartida.payaso.CantidadMonedas = monedasTotales;
+        InformacionPartida.payaso.Vida = UIManager.UIcontroller.hud.VidaMaxima;
+        InformacionPartida.payaso.posicion = GameObject.Find("Payaso(Clone)").GetComponent<JugadorController>().transform.position;
+    }
+
+    public void CargarPartida()
+    {
+        monedasTotales = InformacionPartida.payaso.CantidadMonedas;
+        UIManager.UIcontroller.hud.VidaMaxima = InformacionPartida.payaso.Vida;
+        GameObject.Find("Payaso(Clone)").GetComponent<JugadorController>().transform.position = InformacionPartida.payaso.posicion;
+
     }
 
 

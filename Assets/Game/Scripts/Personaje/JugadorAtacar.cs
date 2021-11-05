@@ -7,7 +7,7 @@ public class JugadorAtacar : MonoBehaviour
 {
 
     [SerializeField] public JugadorController jugadorController;
-    [SerializeField] private GameObject bala;
+    [SerializeField] public GameObject bala;
     [SerializeField] Transform PuntodeDisparo;
     [NonSerialized]public bool Disparar = false;
     private bool PresionandoDisparar = false;
@@ -26,6 +26,7 @@ public class JugadorAtacar : MonoBehaviour
         if (EstadoDisparo() == true && PresionandoDisparar == true && Disparar == true)
         {
             Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
+            GameManager.gameManager.jugadorManager.jugadorController.sonidos.SonidoDisparo();
             Invoke("Controlador", 0.25f);
         }
         

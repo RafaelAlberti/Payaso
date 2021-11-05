@@ -5,6 +5,8 @@ using UnityEngine;
 public class JugadorPowerUps : MonoBehaviour
 {
     [SerializeField] JugadorController jugadorController;
+
+    public bool pw = false;
     void Start()
     {
         this.jugadorController = GetComponent<JugadorController>();
@@ -16,11 +18,13 @@ public class JugadorPowerUps : MonoBehaviour
         if (collision.CompareTag("Rojo"))
         {
             GloboRojo();
+            GameManager.gameManager.jugadorManager.jugadorController.sonidos.SonidoGlobo();
             Destroy(collision.gameObject);
         }
 
         if (collision.CompareTag("Verde"))
         {
+            GameManager.gameManager.jugadorManager.jugadorController.sonidos.SonidoGlobo();
             GloboVerde();
             Destroy(collision.gameObject);
         }
@@ -28,6 +32,7 @@ public class JugadorPowerUps : MonoBehaviour
         if (collision.CompareTag("Azul"))
         {
             GloboAzul();
+            GameManager.gameManager.jugadorManager.jugadorController.sonidos.SonidoGlobo();
             Destroy(collision.gameObject);
         }
 
@@ -37,12 +42,13 @@ public class JugadorPowerUps : MonoBehaviour
     public void GloboRojo()
     {
       jugadorController.RecibirVida();
+       
     }
 
 
     public void GloboAzul()
     {
-        Debug.Log("Hola, Yo soy el globo azul con el nuevo sistema");
+        pw = true;
     }
 
 
