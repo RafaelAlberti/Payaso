@@ -10,6 +10,7 @@ public class Pausa : MonoBehaviour
     [SerializeField] private GameObject Hud;
 
 
+
     public void Pausar()
     {
         Time.timeScale = 0f;
@@ -35,9 +36,18 @@ public class Pausa : MonoBehaviour
         Time.timeScale = 1f;
         Hud.SetActive(false);
         SceneManager.LoadScene("Opciones", LoadSceneMode.Additive);
-        GameManager.gameManager.Nivel();
         GameManager.gameManager.UIManager.menuManager.DestruirMenu();
+    }
 
+    public void Guardar()
+    {
+        GameManager.gameManager.GuardarPartida();
+    }
+
+
+    public void Cargar()
+    {
+        GameManager.gameManager.CargarPartida();
     }
 
     public void Salir()

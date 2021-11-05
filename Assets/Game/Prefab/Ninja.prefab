@@ -242,7 +242,7 @@ MonoBehaviour:
   enemigoController: {fileID: 0}
   Shuriken: {fileID: 3499286240226194901, guid: b432c64507ca2eb44af10a0301124efa, type: 3}
   PuntodeDisparo: {fileID: 6114050082930278958}
-  TiempoEntreDisparos: 0.6
+  TiempoEntreDisparos: 1
   EstadoAtaque: 0
 --- !u!114 &5282065694271220111
 MonoBehaviour:

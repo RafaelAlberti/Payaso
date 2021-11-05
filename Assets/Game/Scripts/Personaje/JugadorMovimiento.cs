@@ -10,10 +10,13 @@ public class JugadorMovimiento : MonoBehaviour
     [SerializeField, Range (0, 120)] float salto;
     [SerializeField, Range(0, 120)]  float velocidad;
     [NonSerialized]public float MovimientoHorizontal;
+    [SerializeField] private float TiempoPower;
     private Rigidbody2D rgb2d;
     private BoxCollider2D boxCollider;
-    
-   
+    bool Azul;
+    private float Contador;
+
+
     void Start()
     {
         this.jugadorController = GetComponent<JugadorController>();
@@ -27,6 +30,7 @@ public class JugadorMovimiento : MonoBehaviour
             MovimientoHorizontal = var;
             rgb2d.velocity = new Vector2(MovimientoHorizontal * velocidad, rgb2d.velocity.y);
             Orientacion();
+            PowerVelocidad();
     }
 
 
@@ -65,5 +69,25 @@ public class JugadorMovimiento : MonoBehaviour
         return raycast;
     } 
 
+
+    public void PowerVelocidad()
+    {
+        float var = velocidad;
+        Azul = GameManager.gameManager.jugadorManager.jugadorController.powerUps.pw;
+        Contador += Time.deltaTime;
+
+        if (Contador > TiempoPower && Azul == true)
+        {
+           velocidad *= 2;
+            GameManager.gameManager.jugadorManager.jugadorController.powerUps.pw = false;
+        }
+        else
+        {
+            velocidad = var;
+        }
+
+        
+
+    }
 
 }

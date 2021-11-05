@@ -112,5 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c6409f6240fe74782a3a6f9f0b2c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneda: 1
   gameManager: {fileID: 0}
+  moneda: 1

@@ -66,7 +66,7 @@ public class @Payaso : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""81ffd008-c3a9-4686-b824-25867e7b3e8b"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -209,7 +209,7 @@ public class @Payaso : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""44b861a2-c4d1-40dc-9c70-e100b401c3c6"",
-                    ""path"": ""<Gamepad>/start"",
+                    ""path"": ""<DualShockGamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -219,8 +219,8 @@ public class @Payaso : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""77bb612d-43b4-495d-9c66-fcc0991274ab"",
-                    ""path"": ""<DualShockGamepad>/start"",
+                    ""id"": ""bc2c21a6-254d-49db-b13a-88b06952351d"",
+                    ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -246,6 +246,17 @@ public class @Payaso : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
+                    ""action"": ""Saltar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f88a4653-46ca-4df8-864c-53125ce16b5f"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Saltar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
