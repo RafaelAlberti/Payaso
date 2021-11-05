@@ -24,6 +24,13 @@ public class JugadorController : MonoBehaviour
        this.sonidos = GetComponent<JugadorSonidos>();
     }
 
+    public void RecibirdañoJefe()
+    {
+        GameManager.gameManager.UIManager.UIcontroller.hud.DañoJefe();
+        GameManager.gameManager.UIManager.UIcontroller.hud.QuitarVidas();
+        Destroy(GameManager.gameManager.jugadorManager.InstanciaJugador);
+        GameManager.gameManager.jugadorManager.SpawnDePersonaje();
+    }
 
     public void RecibirDanio()
     {

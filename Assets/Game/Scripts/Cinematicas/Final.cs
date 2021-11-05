@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.Playables;
 public class Final : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Final : MonoBehaviour
         {
             EscenaFinal();
             GameManager.gameManager.jugadorManager.jugadorController.cinematicaFinal = false;
-            Invoke("VolverAlMenu", 3f);
+            Invoke("VolverAlMenu", 5f);
         }
     }
 

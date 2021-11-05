@@ -25,7 +25,8 @@ public class EnemigoEstado : MonoBehaviour
 
     private void Update()
     {
-        Payaso = GameObject.Find("Payaso(Clone)").GetComponent<JugadorController>().transform;
+        Transform transform1 = GameObject.Find("Payaso(Clone)").GetComponent<JugadorController>().transform;
+        Payaso = transform1;
         DistanciaDelPayaso = Mathf.Abs(Payaso.position.x - this.transform.position.x);
         EstadosComportamiento();
     }

@@ -121298,6 +121298,7 @@ MonoBehaviour:
   - {fileID: 1425566388}
   - {fileID: 1180638225}
   - {fileID: 615254002}
+  VidaObjeto: {fileID: 0}
   VidaMaxima: 3
 --- !u!114 &1687269499
 MonoBehaviour:

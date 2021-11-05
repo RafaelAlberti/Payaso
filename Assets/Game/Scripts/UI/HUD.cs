@@ -10,11 +10,13 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI monedas;
     public GameObject Perdiste;
     public GameObject[] VidaCorazones;
+    public GameObject VidaObjeto;
     public int VidaMaxima = 3;
 
     private void Start()
     {
         VidaMaxima = VidaCorazones.Length;
+
     }
 
     void Update()
@@ -30,17 +32,17 @@ public class HUD : MonoBehaviour
 
     public void QuitarVidas()
     {
-        if (VidaMaxima < 1)
+        if (VidaMaxima < 1 )
         {
-            VidaCorazones[0].SetActive(false);
+            VidaCorazones[VidaMaxima].SetActive(false);
         }
         else if(VidaMaxima < 2)
         {
-            VidaCorazones[1].SetActive(false);
+            VidaCorazones[VidaMaxima].SetActive(false);
         }
         else if(VidaMaxima < 3)
         {
-            VidaCorazones[2].SetActive(false);
+            VidaCorazones[VidaMaxima].SetActive(false);
         }
     }
 
@@ -48,11 +50,11 @@ public class HUD : MonoBehaviour
     {
         if (VidaMaxima >= 1 && VidaMaxima <= 2)
         {
-            VidaCorazones[1].SetActive(true);
+            VidaCorazones[VidaMaxima].SetActive(true);
         }
         else if (VidaMaxima >= 2 && VidaMaxima <= 3)
         {
-            VidaCorazones[2].SetActive(true);
+            VidaCorazones[VidaMaxima].SetActive(true);
         }
     }
 
@@ -61,6 +63,12 @@ public class HUD : MonoBehaviour
     {
         VidaMaxima--;
     }
+
+    public void DañoJefe()
+    {
+        VidaMaxima -= 3;
+    }
+
 
     public void Curar()
     {
@@ -71,6 +79,7 @@ public class HUD : MonoBehaviour
     public void muerte()
     {
         Perdiste.SetActive(true);
+        VidaObjeto.SetActive(false);
     }
 
     public void vive()
