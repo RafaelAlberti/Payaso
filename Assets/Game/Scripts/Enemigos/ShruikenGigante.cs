@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shuriken : MonoBehaviour
+public class ShruikenGigante : MonoBehaviour
 {
-    [SerializeField] private float velocidad = 6.0f;
+    [SerializeField] private float velocidad = 18f;
     private Rigidbody2D rb2d;
-
 
     void Start()
     {
@@ -18,18 +17,18 @@ public class Shuriken : MonoBehaviour
     {
         MovimientoShuriken();
         DestruccionShuriken();
-      
+
     }
 
     public void MovimientoShuriken()
     {
-      rb2d.velocity = transform.right * velocidad;
+        rb2d.velocity = transform.right * velocidad;
     }
 
     private void DestruccionShuriken()
     {
 
-      Destroy(this.gameObject, 1f);
+        Destroy(this.gameObject, 1.5f);
     }
 
 
@@ -38,9 +37,15 @@ public class Shuriken : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Destroy(this.gameObject);
-            GameManager.gameManager.jugadorManager.jugadorController.RecibirDanio();
-                   
+            RestarVidas(); 
         }
     }
+
+
+    public  void RestarVidas()
+    {
+        GameManager.gameManager.jugadorManager.jugadorController.RecibirdañoJefe();
+    }
+
 
 }
