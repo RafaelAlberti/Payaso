@@ -19,5 +19,5 @@ jobs:
           run: Start-Process -Wait 'C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe' -ArgumentList "-runTests -batchmode -testPlatform PlayMode -projectPath $env:PROJECT_PATH  -testResults ./PruebasPlayMode.xml"
         - uses: actions/upload-artifact@v2
           with:
-            name: PruebasUnity
-            path: PruebasUnity*.xml
+            name: Pruebas
+            path: Pruebas*.xml
