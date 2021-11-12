@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
-
 using UnityEngine.SceneManagement;
 
 
@@ -38,7 +37,6 @@ public class PlayTest
         float PosicionInicialX = Jugador.transform.position.x;
         float PosicionFinalX = PosicionInicialX + 10;
         yield return new WaitForSeconds(1);
-        Assert.NotNull(Jugador);
         Assert.Greater(PosicionFinalX, 10);
     }
 
@@ -57,11 +55,9 @@ public class PlayTest
     public IEnumerator DispararPersonaje()
     {
         GameObject Jugador = GameObject.Find("Payaso(Clone)");
-        float PosicionInicialY = Jugador.transform.position.y;
-        float PosicionEsperadaY = PosicionInicialY + 10;
-        Jugador.GetComponent<JugadorAtacar>().Disparo();
-        bool disparo = Jugador.GetComponent<JugadorAtacar>().Disparar;
+        GameObject Bala = Jugador.GetComponent<JugadorAtacar>().bala;
         yield return new WaitForSeconds(1);
-        Assert.IsTrue(disparo);
+        Assert.NotNull(Bala);
     }
+
 }

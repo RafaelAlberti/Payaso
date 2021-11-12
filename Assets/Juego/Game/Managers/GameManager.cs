@@ -34,9 +34,9 @@ public class GameManager : MonoBehaviour
 
   
 
-    public void SumarMonedas(int monedasSumar)
+    public void SumarMonedas()
     {
-      this.monedasTotales += monedasSumar;
+      this.monedasTotales ++;
         
     }
 
