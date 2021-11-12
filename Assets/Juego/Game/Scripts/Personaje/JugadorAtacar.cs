@@ -18,10 +18,10 @@ public class JugadorAtacar : MonoBehaviour
         jugadorController = GetComponent<JugadorController>();
     }
 
-    public void Disparo()
+    public void Disparo(bool var)
     {
         Disparar = true;
-        
+        PresionandoDisparar = var;
         if (EstadoDisparo() == true && PresionandoDisparar == true && Disparar == true)
         {
             Instantiate(bala, PuntodeDisparo.position, PuntodeDisparo.rotation);
@@ -48,10 +48,6 @@ public class JugadorAtacar : MonoBehaviour
 
     }
 
-    public void InputDisparo(bool var)
-    {
-        PresionandoDisparar = var;
-    }
   
     void Controlador()
     {

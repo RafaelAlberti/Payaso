@@ -6,23 +6,40 @@ using UnityEngine.TestTools;
 
 public class EditTest
 {
-   
+
+    [Test]
+    public void VidaPersonaje()
+    {
+        int vidaPersonaje = GameManager.gameManager.UIManager.UIcontroller.hud.VidaMaxima;
+        Assert.Equals(vidaPersonaje, 3);
+    }
 
 
     [Test]
-    public void SpawnPersonaje()
+    public void SumarMonedas()
     {
-        GameObject gameManager = new GameObject();
-        GameManager instanciaGameManager = gameManager.AddComponent<GameManager>();
-        int vidapersonaje = GameManager.gameManager.UIManager.UIcontroller.hud.VidaMaxima;
-        Assert.AreEqual(vidapersonaje, 3);
+       GameObject gameManager = new GameObject();
+       gameManager.GetComponent<GameManager>().SumarMonedas(); 
+       int Monedas = GameManager.gameManager.MonedasTotalesPropiedad;
+       Assert.GreaterOrEqual(Monedas, 1);
     }
 
-    [UnityTest]
-    public IEnumerator EditTestWithEnumeratorPasses()
+    [Test]
+    public void HacerDaño()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        int vidaPersonaje = GameManager.gameManager.UIManager.UIcontroller.hud.VidaMaxima;
+        GameManager.gameManager.UIManager.UIcontroller.hud.HacerDanio();
+        Assert.LessOrEqual(vidaPersonaje, 2);
+    }
+
+    [Test]
+    public void VidaDelJefe()
+    {
+        VidaJefe vida = new VidaJefe();
+
+        int VidaTotal = vida.VidaMaxima;
+
+        Assert.Equals(VidaTotal, 10);
+
     }
 }

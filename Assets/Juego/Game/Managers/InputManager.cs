@@ -37,7 +37,7 @@ public class InputManager : MonoBehaviour
     public void OnAtacar(InputValue Valor)
     {
         Presionar = Valor.isPressed;
-        GameManager.gameManager.jugadorManager.jugadorController.atacar.InputDisparo(Presionar);
+        GameManager.gameManager.jugadorManager.jugadorController.atacar.Disparo(Presionar);
     }
 
 

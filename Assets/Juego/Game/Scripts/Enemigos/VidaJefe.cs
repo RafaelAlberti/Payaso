@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VidaJefe : MonoBehaviour
 {
-    private int VidaMaxima = 10;
+   public int VidaMaxima = 10;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
