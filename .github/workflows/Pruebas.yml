@@ -1,23 +1,23 @@
-name: Build
+name: Pruebas
 
 on:
   push:
     branches: [ main ]
 
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   tests:
-    runs-on: [self-hosted]
-       env:
-      PROJECT_PATH: ".\\"
-    steps:
-      - uses: actions/checkout@v2
-      - name: Prueba EditMode
-        run: Start-Process -Wait 'C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe' -ArgumentList "-runTests -batchmode -testPlatform EditMode -projectPath $env:PROJECT_PATH  -testResults ./PruebasEditMode.xml"
-      - name: Prueba PlayMode
-        run: Start-Process -Wait 'C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe' -ArgumentList "-runTests -batchmode -testPlatform PlayMode -projectPath $env:PROJECT_PATH  -testResults ./PruebasPlayMode.xml"
-      - uses: actions/upload-artifact@v2
-        with:
-          name: PruebasUnity
-          path: PruebasUnity*.xml
+      runs-on: [self-hosted]
+      env:
+           PROJECT_PATH: ".\\"
+      steps:
+        - uses: actions/checkout@v2
+        - name: Prueba EditMode
+          run: Start-Process -Wait 'C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe' -ArgumentList "-runTests -batchmode -testPlatform EditMode -projectPath $env:PROJECT_PATH  -testResults ./PruebasEditMode.xml"
+        - name: Prueba PlayMode
+          run: Start-Process -Wait 'C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe' -ArgumentList "-runTests -batchmode -testPlatform PlayMode -projectPath $env:PROJECT_PATH  -testResults ./PruebasPlayMode.xml"
+        - uses: actions/upload-artifact@v2
+          with:
+            name: PruebasUnity
+            path: PruebasUnity*.xml
