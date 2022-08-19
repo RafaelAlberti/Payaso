@@ -9,7 +9,7 @@ public class JugadorMovimiento : MonoBehaviour
     [SerializeField] LayerMask capaSuelo;
     [SerializeField, Range (0, 120)] float salto;
     [SerializeField, Range(0, 120)]  float velocidad;
-    [NonSerialized]public float MovimientoHorizontal;
+    [NonSerialized]  public float MovimientoHorizontal;
     [SerializeField] private float TiempoPower;
     private Rigidbody2D rgb2d;
     private BoxCollider2D boxCollider;
